@@ -1,0 +1,1 @@
+json.array! @cert_source_links, partial: 'cert_source_links/cert_source_link', as: :cert_source_link

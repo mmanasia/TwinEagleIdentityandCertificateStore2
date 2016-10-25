@@ -1,0 +1,2 @@
+module StoreAccessesHelper
+end

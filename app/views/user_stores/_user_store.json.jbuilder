@@ -1,0 +1,2 @@
+json.extract! user_store, :id, :UserStoreName, :UserStorePassword, :UserStoreExpirationDate, :Source_id, :Environment_id, :IdentityType_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted, :created_at, :updated_at
+json.url user_store_url(user_store, format: :json)

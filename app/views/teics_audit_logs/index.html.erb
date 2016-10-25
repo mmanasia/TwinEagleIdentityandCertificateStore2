@@ -1,0 +1,60 @@
+<h1>TEICS Audit Log</h1>
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+
+<div style="overflow-x:auto;">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+  </style>
+
+
+  <table>
+    <thead>
+    <tr>
+      <th>Record ID</th>
+      <th>Table Name</th>
+      <th>Attribute</th>
+      <th>Previous Value</th>
+      <th>Current Value</th>
+      <th>Created By</th>
+      <th>Created Date</th>
+      <th>Last Modified By</th>
+      <th>Last Modified Date</th>
+      <th>Is Deleted</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @teics_audit_logs.each do |teics_audit_log| %>
+        <tr>
+          <td><%= teics_audit_log.RecordId %></td>
+          <td><%= teics_audit_log.TableName %></td>
+          <td><%= teics_audit_log.Attribute %></td>
+          <td><%= teics_audit_log.PreviousValue %></td>
+          <td><%= teics_audit_log.CurrentValue %></td>
+          <td><%= teics_audit_log.CreatedBy %></td>
+          <td><%= teics_audit_log.CreatedDate %></td>
+          <td><%= teics_audit_log.LastModifiedBy %></td>
+          <td><%= teics_audit_log.LastModifiedDate %></td>
+          <td><%= teics_audit_log.IsDeleted %></td>
+          <td><%= link_to 'View', teics_audit_log %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br>
+

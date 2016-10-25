@@ -1,0 +1,45 @@
+<%= form_for(@user_source_link) do |f| %>
+  <% if @user_source_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_source_link.errors.count, "error") %> prohibited this user_source_link from being saved:</h2>
+
+      <ul>
+      <% @user_source_link.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :SourceLink_id %><br>
+    <%= f.number_field :SourceLink_id %>
+  </div>
+  <div class="field">
+    <%= f.label :UserStore_id %><br>
+    <%= f.number_field :UserStore_id %>
+  </div>
+  <div class="field">
+    <%= f.label :CreatedBy %><br>
+    <%= f.text_field :CreatedBy %>
+  </div>
+  <div class="field">
+    <%= f.label :CreatedDate %><br>
+    <%= f.datetime_select :CreatedDate %>
+  </div>
+  <div class="field">
+    <%= f.label :LastModifiedBy %><br>
+    <%= f.text_field :LastModifiedBy %>
+  </div>
+  <div class="field">
+    <%= f.label :LastModifiedDate %><br>
+    <%= f.datetime_select :LastModifiedDate %>
+  </div>
+  <div class="field">
+    <%= f.label :IsDeleted %><br>
+    <%= f.check_box :IsDeleted %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

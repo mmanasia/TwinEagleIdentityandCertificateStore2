@@ -1,0 +1,1 @@
+json.array! @teics_audit_logs, partial: 'teics_audit_logs/teics_audit_log', as: :teics_audit_log

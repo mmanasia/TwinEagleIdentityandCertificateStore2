@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  SourceLink_id: 1
+  UserStore_id: 1
+  CreatedBy: MyString
+  CreatedDate: 2016-10-25 14:05:21
+  LastModifiedBy: MyString
+  LastModifiedDate: 2016-10-25 14:05:21
+  IsDeleted: false
+
+two:
+  SourceLink_id: 1
+  UserStore_id: 1
+  CreatedBy: MyString
+  CreatedDate: 2016-10-25 14:05:21
+  LastModifiedBy: MyString
+  LastModifiedDate: 2016-10-25 14:05:21
+  IsDeleted: false

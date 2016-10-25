@@ -1,0 +1,1 @@
+json.partial! "user_access_audit_logs/user_access_audit_log", user_access_audit_log: @user_access_audit_log

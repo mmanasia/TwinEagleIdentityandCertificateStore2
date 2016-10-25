@@ -1,0 +1,73 @@
+<%= form_for(@cert_store) do |f| %>
+  <% if @cert_store.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cert_store.errors.count, "error") %> prohibited this cert_store from being saved:</h2>
+
+      <ul>
+      <% @cert_store.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :'CertStore Name' %><br>
+    <%= f.text_field :CertStoreName %>
+  </div>
+  <div class="field">
+    <%= f.label :'CertStore Description' %><br>
+    <%= f.text_field :CertStoreDescription %>
+  </div>
+  <div class="field">
+    <%= f.label :'CertStore Password' %><br>
+    <%= f.text_field :CertStorePassword %>
+  </div>
+  <div class="field">
+    <%= f.label :'CertStore Expiration Date' %><br>
+    <%= f.datetime_select :CertStoreExpirationDate %>
+  </div>
+  <div class="field">
+    <%= f.label :unc %><br>
+    <%= f.text_field :unc %>
+  </div>
+  <div class="field">
+    <%= f.label :'Mime Type' %><br>
+    <%= f.text_field :MimeType %>
+  </div>
+  <div class="field">
+    <%= f.label :'Source Description' %><br>
+    <%= f.collection_select :Source_id, Source.all, :id, :SourceDescription, include_blank:true %>
+  </div>
+  <div class="field">
+    <%= f.label :'Environment Name' %><br>
+    <%= f.collection_select :Environment_id, Environment.all, :id, :EnvironmentName, include_blank:true %>
+  </div>
+  <div class="field">
+    <%= f.label :'Identity Type Name' %><br>
+    <%= f.collection_select :IdentityType_id, IdentityType.all, :id, :IdentityTypeName, include_blank:true %>
+  </div>
+  <div class="field">
+    <%= f.label :'Created By' %><br>
+    <%= f.text_field :CreatedBy %>
+  </div>
+  <div class="field">
+    <%= f.label :'Created Date' %><br>
+    <%= f.datetime_select :CreatedDate %>
+  </div>
+  <div class="field">
+    <%= f.label :'Last Modified By' %><br>
+    <%= f.text_field :LastModifiedBy %>
+  </div>
+  <div class="field">
+    <%= f.label :'Last Modified Date' %><br>
+    <%= f.datetime_select :LastModifiedDate %>
+  </div>
+  <div class="field">
+    <%= f.label :'Is Deleted' %><br>
+    <%= f.check_box :IsDeleted %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

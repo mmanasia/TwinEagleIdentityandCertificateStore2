@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recordid:</strong>
+  <%= @user_access_audit_log.RecordId %>
+</p>
+
+<p>
+  <strong>Tablename:</strong>
+  <%= @user_access_audit_log.TableName %>
+</p>
+
+<p>
+  <strong>Attribute:</strong>
+  <%= @user_access_audit_log.Attribute %>
+</p>
+
+<p>
+  <strong>Previousvalue:</strong>
+  <%= @user_access_audit_log.PreviousValue %>
+</p>
+
+<p>
+  <strong>Currentvalue:</strong>
+  <%= @user_access_audit_log.CurrentValue %>
+</p>
+
+<p>
+  <strong>Createdby:</strong>
+  <%= @user_access_audit_log.CreatedBy %>
+</p>
+
+<p>
+  <strong>Createddate:</strong>
+  <%= @user_access_audit_log.CreatedDate %>
+</p>
+
+<p>
+  <strong>Lastmodifiedby:</strong>
+  <%= @user_access_audit_log.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Lastmodifieddate:</strong>
+  <%= @user_access_audit_log.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Isdeleted:</strong>
+  <%= @user_access_audit_log.IsDeleted %>
+</p>
+
+<%= link_to 'Edit', edit_user_access_audit_log_path(@user_access_audit_log) %> |
+<%= link_to 'Back', user_access_audit_logs_path %>

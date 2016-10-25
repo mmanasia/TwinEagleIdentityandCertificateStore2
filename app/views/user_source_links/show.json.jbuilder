@@ -1,0 +1,1 @@
+json.partial! "user_source_links/user_source_link", user_source_link: @user_source_link

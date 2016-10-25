@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdentityTypeName: MyString
+  IdentityTypeDescription: MyString
+  CreatedBy: MyString
+  CreatedDate: 2016-10-25 13:59:15
+  LastModifiedBy: MyString
+  LastModifiedDate: 2016-10-25 13:59:15
+  IsDeleted: false
+
+two:
+  IdentityTypeName: MyString
+  IdentityTypeDescription: MyString
+  CreatedBy: MyString
+  CreatedDate: 2016-10-25 13:59:15
+  LastModifiedBy: MyString
+  LastModifiedDate: 2016-10-25 13:59:15
+  IsDeleted: false

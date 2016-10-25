@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CertStoreName: MyString
+  CertStoreDescription: MyString
+  CertStorePassword: MyString
+  CertStoreExpirationDate: 2016-10-25 14:01:45
+  unc: MyString
+  MimeType: MyString
+  Source_id: 1
+  Environment_id: 1
+  IdentityType_id: 1
+  CreatedBy: MyString
+  CreatedDate: 2016-10-25 14:01:45
+  LastModifiedBy: MyString
+  LastModifiedDate: 2016-10-25 14:01:45
+  IsDeleted: false
+
+two:
+  CertStoreName: MyString
+  CertStoreDescription: MyString
+  CertStorePassword: MyString
+  CertStoreExpirationDate: 2016-10-25 14:01:45
+  unc: MyString
+  MimeType: MyString
+  Source_id: 1
+  Environment_id: 1
+  IdentityType_id: 1
+  CreatedBy: MyString
+  CreatedDate: 2016-10-25 14:01:45
+  LastModifiedBy: MyString
+  LastModifiedDate: 2016-10-25 14:01:45
+  IsDeleted: false

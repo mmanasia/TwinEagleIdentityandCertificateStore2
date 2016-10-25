@@ -1,0 +1,1 @@
+json.partial! "store_accesses/store_access", store_access: @store_access

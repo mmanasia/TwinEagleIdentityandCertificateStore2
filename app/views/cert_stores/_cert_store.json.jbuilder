@@ -1,0 +1,2 @@
+json.extract! cert_store, :id, :CertStoreName, :CertStoreDescription, :CertStorePassword, :CertStoreExpirationDate, :unc, :MimeType, :Source_id, :Environment_id, :IdentityType_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted, :created_at, :updated_at
+json.url cert_store_url(cert_store, format: :json)

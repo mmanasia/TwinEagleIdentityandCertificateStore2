@@ -1,0 +1,1 @@
+json.partial! "teics_audit_logs/teics_audit_log", teics_audit_log: @teics_audit_log

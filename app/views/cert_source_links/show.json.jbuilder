@@ -1,0 +1,1 @@
+json.partial! "cert_source_links/cert_source_link", cert_source_link: @cert_source_link

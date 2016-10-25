@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  UserGroupName: MyString
+  CreatedBy: MyString
+  CreatedDate: 2016-10-25 14:11:40
+  LastModifiedBy: MyString
+  LastModifiedDate: 2016-10-25 14:11:40
+  IsDeleted: false
+
+two:
+  UserGroupName: MyString
+  CreatedBy: MyString
+  CreatedDate: 2016-10-25 14:11:40
+  LastModifiedBy: MyString
+  LastModifiedDate: 2016-10-25 14:11:40
+  IsDeleted: false

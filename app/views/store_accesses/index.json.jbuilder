@@ -1,0 +1,1 @@
+json.array! @store_accesses, partial: 'store_accesses/store_access', as: :store_access

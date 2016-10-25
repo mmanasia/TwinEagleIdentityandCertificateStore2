@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Roledescription:</strong>
+  <%= @role.RoleDescription %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @role.Source.SourceDescription %>
+</p>
+
+<p>
+  <strong>Createdby:</strong>
+  <%= @role.CreatedBy %>
+</p>
+
+<p>
+  <strong>Createddate:</strong>
+  <%= @role.CreatedDate %>
+</p>
+
+<p>
+  <strong>Lastmodifiedby:</strong>
+  <%= @role.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Lastmodifieddate:</strong>
+  <%= @role.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Isdeleted:</strong>
+  <%= @role.IsDeleted %>
+</p>
+
+<%= link_to 'Edit', edit_role_path(@role) %> |
+<%= link_to 'Back', roles_path %>

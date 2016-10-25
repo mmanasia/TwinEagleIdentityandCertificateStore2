@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Networkfirstname:</strong>
+  <%= @network_user.NetworkFirstName %>
+</p>
+
+<p>
+  <strong>Networklastname:</strong>
+  <%= @network_user.NetworkLastName %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @network_user.Email %>
+</p>
+
+<p>
+  <strong>Networkusername:</strong>
+  <%= @network_user.NetworkUsername %>
+</p>
+
+<p>
+  <strong>Networkpassword:</strong>
+  <%= @network_user.NetworkPassword %>
+</p>
+
+<p>
+  <strong>Createdby:</strong>
+  <%= @network_user.CreatedBy %>
+</p>
+
+<p>
+  <strong>Createddate:</strong>
+  <%= @network_user.CreatedDate %>
+</p>
+
+<p>
+  <strong>Lastmodifiedby:</strong>
+  <%= @network_user.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Lastmodifieddate:</strong>
+  <%= @network_user.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Isdeleted:</strong>
+  <%= @network_user.IsDeleted %>
+</p>
+
+<%= link_to 'Edit', edit_network_user_path(@network_user) %> |
+<%= link_to 'Back', network_users_path %>

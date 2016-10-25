@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Certstore:</strong>
+  <%= @cert_source_link.CertStore.CertStoreName %>
+</p>
+
+<p>
+  <strong>Sourcelink:</strong>
+  <%= @cert_source_link.SourceLink.Hyperlink %>
+</p>
+
+<p>
+  <strong>Createdby:</strong>
+  <%= @cert_source_link.CreatedBy %>
+</p>
+
+<p>
+  <strong>Createddate:</strong>
+  <%= @cert_source_link.CreatedDate %>
+</p>
+
+<p>
+  <strong>Lastmodifiedby:</strong>
+  <%= @cert_source_link.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Lastmodifieddate:</strong>
+  <%= @cert_source_link.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Isdeleted:</strong>
+  <%= @cert_source_link.IsDeleted %>
+</p>
+
+<%= link_to 'Edit', edit_cert_source_link_path(@cert_source_link) %> |
+<%= link_to 'Back', cert_source_links_path %>

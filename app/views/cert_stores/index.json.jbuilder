@@ -1,0 +1,1 @@
+json.array! @cert_stores, partial: 'cert_stores/cert_store', as: :cert_store

@@ -1,0 +1,2 @@
+json.extract! cert_store_role, :id, :Role_id, :CertStore_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted, :created_at, :updated_at
+json.url cert_store_role_url(cert_store_role, format: :json)

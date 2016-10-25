@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Userstorename:</strong>
+  <%= @user_store.UserStoreName %>
+</p>
+
+<p>
+  <strong>Userstorepassword:</strong>
+  <%= @user_store.UserStorePassword %>
+</p>
+
+<p>
+  <strong>Userstoreexpirationdate:</strong>
+  <%= @user_store.UserStoreExpirationDate %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @user_store.Source.SourceDescription %>
+</p>
+
+<p>
+  <strong>Environment:</strong>
+  <%= @user_store.Environment.EnvironmentName %>
+</p>
+
+<p>
+  <strong>Identitytype:</strong>
+  <%= @user_store.IdentityType.IdentityTypeName %>
+</p>
+
+<p>
+  <strong>Createdby:</strong>
+  <%= @user_store.CreatedBy %>
+</p>
+
+<p>
+  <strong>Createddate:</strong>
+  <%= @user_store.CreatedDate %>
+</p>
+
+<p>
+  <strong>Lastmodifiedby:</strong>
+  <%= @user_store.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Lastmodifieddate:</strong>
+  <%= @user_store.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Isdeleted:</strong>
+  <%= @user_store.IsDeleted %>
+</p>
+
+<%= link_to 'Edit', edit_user_store_path(@user_store) %> |
+<%= link_to 'Back', user_stores_path %>

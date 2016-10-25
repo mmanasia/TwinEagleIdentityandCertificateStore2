@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sourcedescription:</strong>
+  <%= @source.SourceDescription %>
+</p>
+
+<p>
+  <strong>Createdby:</strong>
+  <%= @source.CreatedBy %>
+</p>
+
+<p>
+  <strong>Createddate:</strong>
+  <%= @source.CreatedDate %>
+</p>
+
+<p>
+  <strong>Lastmodifiedby:</strong>
+  <%= @source.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Lastmodifieddate:</strong>
+  <%= @source.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Isdeleted:</strong>
+  <%= @source.IsDeleted %>
+</p>
+
+<%= link_to 'Edit', edit_source_path(@source) %> |
+<%= link_to 'Back', sources_path %>

@@ -1,0 +1,2 @@
+json.extract! user_store_role, :id, :Role_id, :UserStore_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted, :created_at, :updated_at
+json.url user_store_role_url(user_store_role, format: :json)

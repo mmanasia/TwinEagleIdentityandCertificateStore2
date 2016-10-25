@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hyperlink:</strong>
+  <%= @source_link.Hyperlink %>
+</p>
+
+<p>
+  <strong>Createdby:</strong>
+  <%= @source_link.CreatedBy %>
+</p>
+
+<p>
+  <strong>Createddate:</strong>
+  <%= @source_link.CreatedDate %>
+</p>
+
+<p>
+  <strong>Lastmodifiedby:</strong>
+  <%= @source_link.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Lastmodifieddate:</strong>
+  <%= @source_link.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Isdeleted:</strong>
+  <%= @source_link.IsDeleted %>
+</p>
+
+<%= link_to 'Edit', edit_source_link_path(@source_link) %> |
+<%= link_to 'Back', source_links_path %>

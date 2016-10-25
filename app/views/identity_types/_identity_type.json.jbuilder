@@ -1,0 +1,2 @@
+json.extract! identity_type, :id, :IdentityTypeName, :IdentityTypeDescription, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted, :created_at, :updated_at
+json.url identity_type_url(identity_type, format: :json)

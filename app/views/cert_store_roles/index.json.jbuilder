@@ -1,0 +1,1 @@
+json.array! @cert_store_roles, partial: 'cert_store_roles/cert_store_role', as: :cert_store_role

@@ -1,0 +1,1 @@
+json.partial! "cert_stores/cert_store", cert_store: @cert_store

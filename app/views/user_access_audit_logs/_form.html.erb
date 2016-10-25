@@ -1,0 +1,57 @@
+<%= form_for(@user_access_audit_log) do |f| %>
+  <% if @user_access_audit_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_access_audit_log.errors.count, "error") %> prohibited this user_access_audit_log from being saved:</h2>
+
+      <ul>
+      <% @user_access_audit_log.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :RecordId %><br>
+    <%= f.number_field :RecordId %>
+  </div>
+  <div class="field">
+    <%= f.label :TableName %><br>
+    <%= f.text_field :TableName %>
+  </div>
+  <div class="field">
+    <%= f.label :Attribute %><br>
+    <%= f.text_field :Attribute %>
+  </div>
+  <div class="field">
+    <%= f.label :PreviousValue %><br>
+    <%= f.text_field :PreviousValue %>
+  </div>
+  <div class="field">
+    <%= f.label :CurrentValue %><br>
+    <%= f.text_field :CurrentValue %>
+  </div>
+  <div class="field">
+    <%= f.label :CreatedBy %><br>
+    <%= f.text_field :CreatedBy %>
+  </div>
+  <div class="field">
+    <%= f.label :CreatedDate %><br>
+    <%= f.datetime_select :CreatedDate %>
+  </div>
+  <div class="field">
+    <%= f.label :LastModifiedBy %><br>
+    <%= f.text_field :LastModifiedBy %>
+  </div>
+  <div class="field">
+    <%= f.label :LastModifiedDate %><br>
+    <%= f.datetime_select :LastModifiedDate %>
+  </div>
+  <div class="field">
+    <%= f.label :IsDeleted %><br>
+    <%= f.check_box :IsDeleted %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

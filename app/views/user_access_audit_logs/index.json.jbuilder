@@ -1,0 +1,1 @@
+json.array! @user_access_audit_logs, partial: 'user_access_audit_logs/user_access_audit_log', as: :user_access_audit_log

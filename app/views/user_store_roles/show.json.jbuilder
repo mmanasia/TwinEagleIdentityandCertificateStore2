@@ -1,0 +1,1 @@
+json.partial! "user_store_roles/user_store_role", user_store_role: @user_store_role

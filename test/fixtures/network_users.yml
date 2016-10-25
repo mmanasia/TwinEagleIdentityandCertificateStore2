@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  NetworkFirstName: MyString
+  NetworkLastName: MyString
+  Email: MyString
+  NetworkUsername: MyString
+  NetworkPassword: MyString
+  CreatedBy: MyString
+  CreatedDate: 2016-10-25 14:12:41
+  LastModifiedBy: MyString
+  LastModifiedDate: 2016-10-25 14:12:41
+  IsDeleted: false
+
+two:
+  NetworkFirstName: MyString
+  NetworkLastName: MyString
+  Email: MyString
+  NetworkUsername: MyString
+  NetworkPassword: MyString
+  CreatedBy: MyString
+  CreatedDate: 2016-10-25 14:12:41
+  LastModifiedBy: MyString
+  LastModifiedDate: 2016-10-25 14:12:41
+  IsDeleted: false

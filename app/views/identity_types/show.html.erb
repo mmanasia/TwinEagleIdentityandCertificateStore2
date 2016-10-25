@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identitytypename:</strong>
+  <%= @identity_type.IdentityTypeName %>
+</p>
+
+<p>
+  <strong>Identitytypedescription:</strong>
+  <%= @identity_type.IdentityTypeDescription %>
+</p>
+
+<p>
+  <strong>Createdby:</strong>
+  <%= @identity_type.CreatedBy %>
+</p>
+
+<p>
+  <strong>Createddate:</strong>
+  <%= @identity_type.CreatedDate %>
+</p>
+
+<p>
+  <strong>Lastmodifiedby:</strong>
+  <%= @identity_type.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Lastmodifieddate:</strong>
+  <%= @identity_type.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Isdeleted:</strong>
+  <%= @identity_type.IsDeleted %>
+</p>
+
+<%= link_to 'Edit', edit_identity_type_path(@identity_type) %> |
+<%= link_to 'Back', identity_types_path %>

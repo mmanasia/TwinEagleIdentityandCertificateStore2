@@ -1,0 +1,2 @@
+json.extract! user_access_audit_log, :id, :RecordId, :TableName, :Attribute, :PreviousValue, :CurrentValue, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted, :created_at, :updated_at
+json.url user_access_audit_log_url(user_access_audit_log, format: :json)

@@ -1,0 +1,1 @@
+json.array! @source_links, partial: 'source_links/source_link', as: :source_link

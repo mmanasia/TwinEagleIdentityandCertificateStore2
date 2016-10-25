@@ -1,0 +1,45 @@
+<%= form_for(@environment) do |f| %>
+  <% if @environment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@environment.errors.count, "error") %> prohibited this environment from being saved:</h2>
+
+      <ul>
+      <% @environment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :'Environment Name' %><br>
+    <%= f.text_field :EnvironmentName %>
+  </div>
+  <div class="field">
+    <%= f.label :'Environment Description' %><br>
+    <%= f.text_field :EnvironmentDescription %>
+  </div>
+  <div class="field">
+    <%= f.label :'Created By' %><br>
+    <%= f.text_field :CreatedBy %>
+  </div>
+  <div class="field">
+    <%= f.label :'Created Date' %><br>
+    <%= f.datetime_select :CreatedDate %>
+  </div>
+  <div class="field">
+    <%= f.label :'Last Modified By' %><br>
+    <%= f.text_field :LastModifiedBy %>
+  </div>
+  <div class="field">
+    <%= f.label :'Last Modified Date' %><br>
+    <%= f.datetime_select :LastModifiedDate %>
+  </div>
+  <div class="field">
+    <%= f.label :'Is Deleted' %><br>
+    <%= f.check_box :IsDeleted %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

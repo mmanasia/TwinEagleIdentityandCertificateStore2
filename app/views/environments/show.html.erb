@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Environmentname:</strong>
+  <%= @environment.EnvironmentName %>
+</p>
+
+<p>
+  <strong>Environmentdescription:</strong>
+  <%= @environment.EnvironmentDescription %>
+</p>
+
+<p>
+  <strong>Createdby:</strong>
+  <%= @environment.CreatedBy %>
+</p>
+
+<p>
+  <strong>Createddate:</strong>
+  <%= @environment.CreatedDate %>
+</p>
+
+<p>
+  <strong>Lastmodifiedby:</strong>
+  <%= @environment.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Lastmodifieddate:</strong>
+  <%= @environment.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Isdeleted:</strong>
+  <%= @environment.IsDeleted %>
+</p>
+
+<%= link_to 'Edit', edit_environment_path(@environment) %> |
+<%= link_to 'Back', environments_path %>

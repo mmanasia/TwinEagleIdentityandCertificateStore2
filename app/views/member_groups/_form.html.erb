@@ -1,0 +1,45 @@
+<%= form_for(@member_group) do |f| %>
+  <% if @member_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@member_group.errors.count, "error") %> prohibited this member_group from being saved:</h2>
+
+      <ul>
+      <% @member_group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :NetworkUser_id %><br>
+    <%= f.number_field :NetworkUser_id %>
+  </div>
+  <div class="field">
+    <%= f.label :UserGroup_id %><br>
+    <%= f.number_field :UserGroup_id %>
+  </div>
+  <div class="field">
+    <%= f.label :CreatedBy %><br>
+    <%= f.text_field :CreatedBy %>
+  </div>
+  <div class="field">
+    <%= f.label :CreatedDate %><br>
+    <%= f.datetime_select :CreatedDate %>
+  </div>
+  <div class="field">
+    <%= f.label :LastModifiedBy %><br>
+    <%= f.text_field :LastModifiedBy %>
+  </div>
+  <div class="field">
+    <%= f.label :LastModifiedDate %><br>
+    <%= f.datetime_select :LastModifiedDate %>
+  </div>
+  <div class="field">
+    <%= f.label :IsDeleted %><br>
+    <%= f.check_box :IsDeleted %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

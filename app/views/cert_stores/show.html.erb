@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Certstorename:</strong>
+  <%= @cert_store.CertStoreName %>
+</p>
+
+<p>
+  <strong>Certstoredescription:</strong>
+  <%= @cert_store.CertStoreDescription %>
+</p>
+
+<p>
+  <strong>Certstorepassword:</strong>
+  <%= @cert_store.CertStorePassword %>
+</p>
+
+<p>
+  <strong>Certstoreexpirationdate:</strong>
+  <%= @cert_store.CertStoreExpirationDate %>
+</p>
+
+<p>
+  <strong>Unc:</strong>
+  <%= @cert_store.unc %>
+</p>
+
+<p>
+  <strong>Mimetype:</strong>
+  <%= @cert_store.MimeType %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @cert_store.Source.SourceDescription %>
+</p>
+
+<p>
+  <strong>Environment:</strong>
+  <%= @cert_store.Environment.EnvironmentName %>
+</p>
+
+<p>
+  <strong>Identitytype:</strong>
+  <%= @cert_store.IdentityType.IdentityTypeName %>
+</p>
+
+<p>
+  <strong>Createdby:</strong>
+  <%= @cert_store.CreatedBy %>
+</p>
+
+<p>
+  <strong>Createddate:</strong>
+  <%= @cert_store.CreatedDate %>
+</p>
+
+<p>
+  <strong>Lastmodifiedby:</strong>
+  <%= @cert_store.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Lastmodifieddate:</strong>
+  <%= @cert_store.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Isdeleted:</strong>
+  <%= @cert_store.IsDeleted %>
+</p>
+
+<%= link_to 'Edit', edit_cert_store_path(@cert_store) %> |
+<%= link_to 'Back', cert_stores_path %>
