@@ -1,1 +1,0 @@
-json.partial! "network_users/network_user", network_user: @network_user

@@ -1,4 +1,6 @@
 class UserAccessAuditLogsController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_user_access_audit_log, only: [:show, :edit, :update, :destroy]
 
   # GET /user_access_audit_logs

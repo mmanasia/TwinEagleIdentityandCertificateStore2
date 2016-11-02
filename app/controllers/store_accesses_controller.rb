@@ -1,4 +1,6 @@
 class StoreAccessesController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_store_access, only: [:show, :edit, :update, :destroy]
 
   # GET /store_accesses

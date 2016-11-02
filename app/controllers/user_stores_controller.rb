@@ -1,4 +1,6 @@
 class UserStoresController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_user_store, only: [:show, :edit, :update, :destroy]
 
   # GET /user_stores

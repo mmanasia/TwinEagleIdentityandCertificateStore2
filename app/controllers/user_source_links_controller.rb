@@ -1,4 +1,6 @@
 class UserSourceLinksController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_user_source_link, only: [:show, :edit, :update, :destroy]
 
   # GET /user_source_links

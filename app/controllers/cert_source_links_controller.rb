@@ -1,4 +1,6 @@
 class CertSourceLinksController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_cert_source_link, only: [:show, :edit, :update, :destroy]
 
   # GET /cert_source_links

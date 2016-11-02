@@ -1,2 +1,0 @@
-json.extract! network_user, :id, :NetworkFirstName, :NetworkLastName, :Email, :NetworkUsername, :NetworkPassword, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted, :created_at, :updated_at
-json.url network_user_url(network_user, format: :json)

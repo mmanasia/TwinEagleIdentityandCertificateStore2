@@ -1,4 +1,6 @@
 class TeicsAuditLogsController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_teics_audit_log, only: [:show, :edit, :update, :destroy]
 
   # GET /teics_audit_logs

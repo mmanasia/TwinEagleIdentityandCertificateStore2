@@ -22,3 +22,4 @@ UserGroup.delete_all
 UserSourceLink.delete_all
 UserStoreRole.delete_all
 UserStore.delete_all
+

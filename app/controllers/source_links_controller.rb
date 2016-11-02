@@ -1,4 +1,6 @@
 class SourceLinksController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_source_link, only: [:show, :edit, :update, :destroy]
 
   # GET /source_links

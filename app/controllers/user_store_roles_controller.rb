@@ -1,4 +1,6 @@
 class UserStoreRolesController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_user_store_role, only: [:show, :edit, :update, :destroy]
 
   # GET /user_store_roles

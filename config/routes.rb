@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :member_groups
-  resources :network_users
   resources :user_groups
   resources :user_access_audit_logs
   resources :teics_audit_logs
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'network_users#index'
+   root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

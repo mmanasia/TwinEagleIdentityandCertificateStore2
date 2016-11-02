@@ -1,4 +1,7 @@
 class CertStoresController < ApplicationController
+
+  before_action :authenticate_user!
+
   before_action :set_cert_store, only: [:show, :edit, :update, :destroy]
 
   # GET /cert_stores

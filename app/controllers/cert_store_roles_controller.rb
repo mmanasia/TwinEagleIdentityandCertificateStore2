@@ -1,4 +1,6 @@
 class CertStoreRolesController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_cert_store_role, only: [:show, :edit, :update, :destroy]
 
   # GET /cert_store_roles

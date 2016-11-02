@@ -1,4 +1,6 @@
 class IdentityTypesController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_identity_type, only: [:show, :edit, :update, :destroy]
 
   # GET /identity_types
