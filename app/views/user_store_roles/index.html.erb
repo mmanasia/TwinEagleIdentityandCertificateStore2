@@ -24,11 +24,6 @@
     <tr>
       <th>UserStore Name</th>
       <th>Role Description</th>
-      <th>Created By</th>
-      <th>Created Date</th>
-      <th>Last Modified By</th>
-      <th>Last Modified Date</th>
-      <th>Is Deleted</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -38,11 +33,6 @@
         <tr>
           <td><%= user_store_role.UserStore.UserStoreName %></td>
           <td><%= user_store_role.Role.RoleDescription %></td>
-          <td><%= user_store_role.CreatedBy %></td>
-          <td><%= user_store_role.CreatedDate %></td>
-          <td><%= user_store_role.LastModifiedBy %></td>
-          <td><%= user_store_role.LastModifiedDate %></td>
-          <td><%= user_store_role.IsDeleted %></td>
           <td><%= link_to 'View', user_store_role %></td>
         </tr>
     <% end %>

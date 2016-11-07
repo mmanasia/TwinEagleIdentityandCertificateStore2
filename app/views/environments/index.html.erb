@@ -27,11 +27,6 @@
     <tr>
       <th>Environment Name</th>
       <th>Environment Description</th>
-      <th>Created By</th>
-      <th>Created Date</th>
-      <th>Last Modified By</th>
-      <th>Last Modified Date</th>
-      <th>Is Deleted</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -42,11 +37,6 @@
         <tr>
           <td><%= environment.EnvironmentName %></td>
           <td><%= environment.EnvironmentDescription %></td>
-          <td><%= environment.CreatedBy %></td>
-          <td><%= environment.CreatedDate %></td>
-          <td><%= environment.LastModifiedBy %></td>
-          <td><%= environment.LastModifiedDate %></td>
-          <td><%= environment.IsDeleted %></td>
           <td><%= link_to 'View', environment %></td>
           <td><%= link_to 'Update', edit_environment_path(environment) %></td>
           <td><%= link_to 'Delete', environment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

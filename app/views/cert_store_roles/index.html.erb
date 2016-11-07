@@ -24,11 +24,6 @@
     <tr>
       <th>Role Description</th>
       <th>CertStore Name</th>
-      <th>Created By</th>
-      <th>Created Date</th>
-      <th>Last Modified By</th>
-      <th>Last Modified Date</th>
-      <th>Is Deleted</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -40,11 +35,6 @@
         <tr>
           <td><%= cert_store_role.Role.RoleDescription %></td>
           <td><%= cert_store_role.CertStore.CertStoreName %></td>
-          <td><%= cert_store_role.CreatedBy %></td>
-          <td><%= cert_store_role.CreatedDate %></td>
-          <td><%= cert_store_role.LastModifiedBy %></td>
-          <td><%= cert_store_role.LastModifiedDate %></td>
-          <td><%= cert_store_role.IsDeleted %></td>
           <td><%= link_to 'View', cert_store_role %></td>
         </tr>
     <% end %>

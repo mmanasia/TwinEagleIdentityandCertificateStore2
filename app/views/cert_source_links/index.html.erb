@@ -23,11 +23,6 @@
     <tr>
       <th>CertStore Name</th>
       <th>Source Link Hyperlink</th>
-      <th>Created By</th>
-      <th>Created Date</th>
-      <th>Last Modified By</th>
-      <th>Last Modified Date</th>
-      <th>Is Deleted</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -39,11 +34,6 @@
         <tr>
           <td><%= cert_source_link.CertStore.CertStoreName %>
           <td><%= cert_source_link.SourceLink.Hyperlink %></td>
-          <td><%= cert_source_link.CreatedBy %></td>
-          <td><%= cert_source_link.CreatedDate %></td>
-          <td><%= cert_source_link.LastModifiedBy %></td>
-          <td><%= cert_source_link.LastModifiedDate %></td>
-          <td><%= cert_source_link.IsDeleted %></td>
           <td><%= link_to 'View', cert_store_link %></td>
         </tr>
     <% end %>

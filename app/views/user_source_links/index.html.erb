@@ -24,11 +24,6 @@
     <tr>
       <th>UserStore Name</th>
       <th>Source Link Hyperlink</th>
-      <th>Created By</th>
-      <th>Created Date</th>
-      <th>Last Modified By</th>
-      <th>Last Modified Date</th>
-      <th>Is Deleted</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -38,11 +33,6 @@
         <tr>
           <td><%= user_source_link.UserStore.UserStoreName %></td>
           <td><%= user_source_link.SourceLink.Hyperlink %></td>
-          <td><%= user_source_link.CreatedBy %></td>
-          <td><%= user_source_link.CreatedDate %></td>
-          <td><%= user_source_link.LastModifiedBy %></td>
-          <td><%= user_source_link.LastModifiedDate %></td>
-          <td><%= user_source_link.IsDeleted %></td>
           <td><%= link_to 'View', user_source_link %></td>
         </tr>
     <% end %>

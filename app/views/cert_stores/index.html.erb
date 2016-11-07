@@ -34,10 +34,6 @@
       <th>Source Description</th>
       <th>Environment Name</th>
       <th>Identity Type Name</th>
-      <th>Created By</th>
-      <th>Created Date</th>
-      <th>Last Modified By</th>
-      <th>Last Modified Date</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -49,16 +45,11 @@
           <td><%= cert_store.CertStoreDescription %></td>
           <td><%= cert_store.CertStorePassword %></td>
           <td><%= cert_store.CertStoreExpirationDate %></td>
-          <td><%= cert_store.unc %></td>
+          <td><%= link_to "Download Certificate", certificate.unc_url %></td>
           <td><%= cert_store.MimeType %></td>
           <td><%= cert_store.Source.SourceDescription %></td>
           <td><%= cert_store.Environment.EnvironmentName %></td>
           <td><%= cert_store.IdentityType.IdentityTypeName %></td>
-          <td><%= cert_store.CreatedBy %></td>
-          <td><%= cert_store.CreatedDate %></td>
-          <td><%= cert_store.LastModifiedBy %></td>
-          <td><%= cert_store.LastModifiedDate %></td>
-          <td><%= cert_store.IsDeleted %></td>
           <td><%= link_to 'View', cert_store %></td>
           <td><%= link_to 'Update', edit_cert_store_path(cert_store) %></td>
           <td><%= link_to 'Delete', cert_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>

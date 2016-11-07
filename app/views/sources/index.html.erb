@@ -26,11 +26,6 @@
     <thead>
     <tr>
       <th>Source Description</th>
-      <th>Created By</th>
-      <th>Created Date</th>
-      <th>Last Modified By</th>
-      <th>Last Modified Date</th>
-      <th>Is Deleted</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -39,11 +34,6 @@
     <% @sources.each do |source| %>
         <tr>
           <td><%= source.SourceDescription %></td>
-          <td><%= source.CreatedBy %></td>
-          <td><%= source.CreatedDate %></td>
-          <td><%= source.LastModifiedBy %></td>
-          <td><%= source.LastModifiedDate %></td>
-          <td><%= source.IsDeleted %></td>
           <td><%= link_to 'View', source %></td>
           <td><%= link_to 'Update', edit_source_path(source) %></td>
           <td><%= link_to 'Delete', source, method: :delete, data: { confirm: 'Are you sure?' } %></td>

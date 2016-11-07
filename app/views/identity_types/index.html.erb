@@ -27,11 +27,6 @@
     <tr>
       <th>Identity Type Name</th>
       <th>Identity Type Description</th>
-      <th>Created By</th>
-      <th>Created Date</th>
-      <th>Last Modified By</th>
-      <th>Last Modified Date</th>
-      <th>Is Deleted</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -42,11 +37,6 @@
         <tr>
           <td><%= identity_type.IdentityTypeName %></td>
           <td><%= identity_type.IdentityTypeDescription %></td>
-          <td><%= identity_type.CreatedBy %></td>
-          <td><%= identity_type.CreatedDate %></td>
-          <td><%= identity_type.LastModifiedBy %></td>
-          <td><%= identity_type.LastModifiedDate %></td>
-          <td><%= identity_type.IsDeleted %></td>
           <td><%= link_to 'View', identity_type %></td>
           <td><%= link_to 'Update', edit_identity_type_path(identity_type) %></td>
           <td><%= link_to 'Delete', identity_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>

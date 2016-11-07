@@ -54,3 +54,5 @@ gem 'pundit'
 
 gem 'devise'
 
+gem 'carrierwave'
+

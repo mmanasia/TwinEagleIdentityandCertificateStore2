@@ -42,11 +42,6 @@
         <tr>
           <td><%= role.RoleDescription %>
           <td><%= role.Source.SourceDescription %></td>
-          <td><%= role.CreatedBy %></td>
-          <td><%= role.CreatedDate %></td>
-          <td><%= role.LastModifiedBy %></td>
-          <td><%= role.LastModifiedDate %></td>
-          <td><%= role.IsDeleted %></td>
           <td><%= link_to 'View', role %></td>
           <td><%= link_to 'Update', edit_role_path(role) %></td>
           <td><%= link_to 'Delete', role, method: :delete, data: { confirm: 'Are you sure?' } %></td>

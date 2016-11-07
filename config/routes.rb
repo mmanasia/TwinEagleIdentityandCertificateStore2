@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'certificates/index'
+
+  get 'certificates/new'
+
+  get 'certificates/create'
+
+  get 'certificates/destroy'
+
   devise_for :users
   resources :member_groups
   resources :user_groups
@@ -16,6 +24,7 @@ Rails.application.routes.draw do
   resources :environments
   resources :source_links
   resources :sources
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

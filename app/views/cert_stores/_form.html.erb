@@ -28,8 +28,8 @@
     <%= f.datetime_select :CertStoreExpirationDate %>
   </div>
   <div class="field">
-    <%= f.label :unc %><br>
-    <%= f.text_field :unc %>
+    <%= f.label "Certificate File:" %>
+    <%= f.file_field :unc %><br />
   </div>
   <div class="field">
     <%= f.label :'Mime Type' %><br>
