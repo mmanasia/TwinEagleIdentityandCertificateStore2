@@ -7,4 +7,6 @@ class CertStore < ActiveRecord::Base
   has_many :cert_source_links
   has_many :cert_store_roles
 
+  validates :CertStoreName, :CertStoreDescription, :CertStorePassword, :CertStoreExpirationDate, :unc, :MimeType, :Source_id, :Environment_id, :IdentityType_id, presence: true
+
 end
