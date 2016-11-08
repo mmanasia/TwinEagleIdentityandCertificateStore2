@@ -30,7 +30,11 @@
   <strong>Identity Type Name:</strong>
   <%= @user_store.IdentityType_id %>
 </p>
+  </div>
+  </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Created By:</strong>
   <%= @user_store.CreatedBy %>
@@ -55,7 +59,7 @@
   <strong>Is Deleted:</strong>
   <%= @user_store.IsDeleted %>
 </p>
-    </div>
+  </div>
   </div>
 
 <%= link_to 'Edit', edit_user_store_path(@user_store) %> |

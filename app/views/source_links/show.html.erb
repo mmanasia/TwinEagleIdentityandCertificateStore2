@@ -5,7 +5,11 @@
   <strong>Hyperlink:</strong>
   <%= @source_link.Hyperlink %>
 </p>
+  </div>
+  </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Created By:</strong>
   <%= @source_link.CreatedBy %>
@@ -30,7 +34,7 @@
   <strong>Is Deleted:</strong>
   <%= @source_link.IsDeleted %>
 </p>
-    </div>
+  </div>
   </div>
 
 <%= link_to 'Edit', edit_source_link_path(@source_link) %> |

@@ -15,7 +15,11 @@
   <strong>Created By:</strong>
   <%= @cert_source_link.CreatedBy %>
 </p>
+  </div>
+  </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Created Date:</strong>
   <%= @cert_source_link.CreatedDate %>
@@ -35,7 +39,7 @@
   <strong>Is Deleted:</strong>
   <%= @cert_source_link.IsDeleted %>
 </p>
-    </div>
+  </div>
   </div>
 
 <%= link_to 'Edit', edit_cert_source_link_path(@cert_source_link) %> |

@@ -10,7 +10,11 @@
   <strong>Role Description:</strong>
   <%= @cert_store_role.Role.RoleDescription %>
 </p>
+  </div>
+  </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Created By:</strong>
   <%= @cert_store_role.CreatedBy %>
@@ -35,7 +39,7 @@
   <strong>Is Deleted:</strong>
   <%= @cert_store_role.IsDeleted %>
 </p>
-</div>
+  </div>
   </div>
 
 <%= link_to 'Edit', edit_cert_store_role_path(@cert_store_role) %> |

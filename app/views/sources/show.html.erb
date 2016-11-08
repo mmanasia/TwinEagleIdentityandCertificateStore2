@@ -5,7 +5,11 @@
   <strong>Source Description:</strong>
   <%= @source.SourceDescription %>
 </p>
+  </div>
+  </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Created By:</strong>
   <%= @source.CreatedBy %>
@@ -30,7 +34,8 @@
   <strong>Is Deleted:</strong>
   <%= @source.IsDeleted %>
 </p>
-    </div></div>
+  </div>
+  </div>
 
 <%= link_to 'Edit', edit_source_path(@source) %> |
 <%= link_to 'Back', sources_path %>

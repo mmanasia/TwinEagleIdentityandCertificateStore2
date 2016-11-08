@@ -10,7 +10,11 @@
   <strong>Role Description:</strong>
   <%= @role.RoleDescription %>
 </p>
+  </div>
+  </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Created By:</strong>
   <%= @role.CreatedBy %>
@@ -35,7 +39,7 @@
   <strong>Is Deleted:</strong>
   <%= @role.IsDeleted %>
 </p>
-    </div>
+  </div>
   </div>
 
 <%= link_to 'Edit', edit_role_path(@role) %> |

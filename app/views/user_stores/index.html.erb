@@ -43,9 +43,9 @@
           <td><%= user_store.UserStoreName %></td>
           <td><%= user_store.UserStorePassword %></td>
           <td><%= user_store.UserStoreExpirationDate %></td>
-          <td><%= user_store.Source.SourceDescription %></td>
-          <td><%= user_store.Environment.EnvironmentName %></td>
-          <td><%= user_store.IdentityType.IdentityTypeName %></td>
+          <td><%= user_store.Source_id %></td>
+          <td><%= user_store.Environment_id %></td>
+          <td><%= user_store.IdentityType_id %></td>
           <td><%= link_to 'View', user_store %></td>
           <td><%= link_to 'Update', edit_user_store_path(user_store) %></td>
           <td><%= link_to 'Delete', user_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>

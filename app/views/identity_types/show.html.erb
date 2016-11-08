@@ -10,7 +10,11 @@
   <strong>Identity Type Description:</strong>
   <%= @identity_type.IdentityTypeDescription %>
 </p>
+  </div>
+  </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Created By:</strong>
   <%= @identity_type.CreatedBy %>
@@ -35,7 +39,7 @@
   <strong>Is Deleted:</strong>
   <%= @identity_type.IsDeleted %>
 </p>
-    </div>
+  </div>
   </div>
 
 <%= link_to 'Edit', edit_identity_type_path(@identity_type) %> |

@@ -15,7 +15,11 @@
   <strong>Created By:</strong>
   <%= @environment.CreatedBy %>
 </p>
+  </div>
+  </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Created Date:</strong>
   <%= @environment.CreatedDate %>
@@ -35,7 +39,7 @@
   <strong>Is Deleted:</strong>
   <%= @environment.IsDeleted %>
 </p>
-</div>
+  </div>
   </div>
 
 <%= link_to 'Edit', edit_environment_path(@environment) %> |

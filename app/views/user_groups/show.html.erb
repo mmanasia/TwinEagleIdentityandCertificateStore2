@@ -5,7 +5,11 @@
   <strong>User Group Name:</strong>
   <%= @user_group.UserGroupName %>
 </p>
+  </div>
+  </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Created By:</strong>
   <%= @user_group.CreatedBy %>
@@ -30,7 +34,7 @@
   <strong>Is Deleted:</strong>
   <%= @user_group.IsDeleted %>
 </p>
-</div>
+  </div>
   </div>
 
 <%= link_to 'Edit', edit_user_group_path(@user_group) %> |
