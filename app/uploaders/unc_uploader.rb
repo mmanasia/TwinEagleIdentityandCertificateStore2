@@ -20,9 +20,9 @@ class UncUploader < CarrierWave::Uploader::Base
     %w(der pem crt cer key)
   end
 
-  def content_type_whitelist
-    ['application/pkix-cert','application/x-x509-ca-cert','application/x-x509-user-cert','application/x-pem-file']
-  end
+ # def content_type_whitelist
+ #   ['application/pkix-cert','application/x-x509-ca-cert','application/x-x509-user-cert','application/x-pem-file']
+ # end
 
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
