@@ -31,7 +31,7 @@ class CertStoresController < ApplicationController
 
     respond_to do |format|
       if @cert_store.save
-        format.html { redirect_to @cert_store, notice: 'Cert store was successfully created.' }
+        format.html { redirect_to @cert_store, notice: 'Certificate was successfully created.' }
         format.json { render :show, status: :created, location: @cert_store }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class CertStoresController < ApplicationController
   def update
     respond_to do |format|
       if @cert_store.update(cert_store_params)
-        format.html { redirect_to @cert_store, notice: 'Cert store was successfully updated.' }
+        format.html { redirect_to @cert_store, notice: 'Certificate was successfully updated.' }
         format.json { render :show, status: :ok, location: @cert_store }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class CertStoresController < ApplicationController
   def destroy
     @cert_store.destroy
     respond_to do |format|
-      format.html { redirect_to cert_stores_url, notice: 'Cert store was successfully destroyed.' }
+      format.html { redirect_to cert_stores_url, notice: 'Certificate was successfully deleted.' }
       format.json { head :no_content }
     end
   end

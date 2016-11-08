@@ -58,7 +58,7 @@ class SourceLinksController < ApplicationController
   def destroy
     @source_link.destroy
     respond_to do |format|
-      format.html { redirect_to source_links_url, notice: 'Source link was successfully destroyed.' }
+      format.html { redirect_to source_links_url, notice: 'Source link was successfully deleted.' }
       format.json { head :no_content }
     end
   end

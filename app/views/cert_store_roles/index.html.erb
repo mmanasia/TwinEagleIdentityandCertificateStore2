@@ -18,7 +18,9 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
-  <%= link_to 'Create New Certificate Role', new_cert_store_role_path %>
+  <a class="btn btn-primary" href="http://localhost:3000/cert_store_roles/new" role="button">Create New Certificate Role</a>
+
+  <BR><BR>
 
   <table>
     <thead>
@@ -37,6 +39,8 @@
           <td><%= cert_store_role.CertStore.CertStoreName %></td>
           <td><%= cert_store_role.Role.RoleDescription %></td>
           <td><%= link_to 'View', cert_store_role %></td>
+          <td><%= link_to 'Update', edit_cert_store_role_path(cert_store_role) %></td>
+          <td><%= link_to 'Delete', cert_store_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
     <% end %>
     </tbody>

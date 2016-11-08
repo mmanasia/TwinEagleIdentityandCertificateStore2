@@ -58,7 +58,7 @@ class UserStoreRolesController < ApplicationController
   def destroy
     @user_store_role.destroy
     respond_to do |format|
-      format.html { redirect_to user_store_roles_url, notice: 'User store role was successfully destroyed.' }
+      format.html { redirect_to user_store_roles_url, notice: 'User store role was successfully deleted.' }
       format.json { head :no_content }
     end
   end

@@ -58,7 +58,7 @@ class UserSourceLinksController < ApplicationController
   def destroy
     @user_source_link.destroy
     respond_to do |format|
-      format.html { redirect_to user_source_links_url, notice: 'User source link was successfully destroyed.' }
+      format.html { redirect_to user_source_links_url, notice: 'User source link was successfully deleted.' }
       format.json { head :no_content }
     end
   end

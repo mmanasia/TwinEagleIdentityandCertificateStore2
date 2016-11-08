@@ -30,7 +30,7 @@ class CertSourceLinksController < ApplicationController
 
     respond_to do |format|
       if @cert_source_link.save
-        format.html { redirect_to @cert_source_link, notice: 'Cert source link was successfully created.' }
+        format.html { redirect_to @cert_source_link, notice: 'Certificate source link was successfully created.' }
         format.json { render :show, status: :created, location: @cert_source_link }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class CertSourceLinksController < ApplicationController
   def update
     respond_to do |format|
       if @cert_source_link.update(cert_source_link_params)
-        format.html { redirect_to @cert_source_link, notice: 'Cert source link was successfully updated.' }
+        format.html { redirect_to @cert_source_link, notice: 'Certificate source link was successfully updated.' }
         format.json { render :show, status: :ok, location: @cert_source_link }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class CertSourceLinksController < ApplicationController
   def destroy
     @cert_source_link.destroy
     respond_to do |format|
-      format.html { redirect_to cert_source_links_url, notice: 'Cert source link was successfully destroyed.' }
+      format.html { redirect_to cert_source_links_url, notice: 'Certificate source link was successfully deleted.' }
       format.json { head :no_content }
     end
   end

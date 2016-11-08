@@ -58,7 +58,7 @@ class UserStoresController < ApplicationController
   def destroy
     @user_store.destroy
     respond_to do |format|
-      format.html { redirect_to user_stores_url, notice: 'User store was successfully destroyed.' }
+      format.html { redirect_to user_stores_url, notice: 'User store was successfully deleted.' }
       format.json { head :no_content }
     end
   end

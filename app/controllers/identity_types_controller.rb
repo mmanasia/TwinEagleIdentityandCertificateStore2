@@ -58,7 +58,7 @@ class IdentityTypesController < ApplicationController
   def destroy
     @identity_type.destroy
     respond_to do |format|
-      format.html { redirect_to identity_types_url, notice: 'Identity type was successfully destroyed.' }
+      format.html { redirect_to identity_types_url, notice: 'Identity type was successfully deleted.' }
       format.json { head :no_content }
     end
   end

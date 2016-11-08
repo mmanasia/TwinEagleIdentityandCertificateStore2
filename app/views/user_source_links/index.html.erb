@@ -18,7 +18,9 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
-  <%= link_to 'Create New User Source Link', new_user_source_link_path %>
+  <a class="btn btn-primary" href="http://localhost:3000/user_source_links/new" role="button">Create New User Source Link</a>
+
+  <BR><BR>
 
   <table>
     <thead>
@@ -35,6 +37,8 @@
           <td><%= user_source_link.UserStore.UserStoreName %></td>
           <td><%= user_source_link.SourceLink.Hyperlink %></td>
           <td><%= link_to 'View', user_source_link %></td>
+          <td><%= link_to 'Update', edit_user_source_link_path(user_source_link) %></td>
+          <td><%= link_to 'Delete', user_source_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
     <% end %>
     </tbody>

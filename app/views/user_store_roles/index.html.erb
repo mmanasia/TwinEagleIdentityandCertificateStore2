@@ -18,7 +18,9 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
-  <%= link_to 'Create New User Store Role', new_user_store_role_path %>
+  <a class="btn btn-primary" href="http://localhost:3000/user_store_roles/new" role="button">Create New User Store Role</a>
+
+  <BR><BR>
 
   <table>
     <thead>
@@ -35,6 +37,8 @@
           <td><%= user_store_role.UserStore.UserStoreName %></td>
           <td><%= user_store_role.Role.RoleDescription %></td>
           <td><%= link_to 'View', user_store_role %></td>
+          <td><%= link_to 'Update', edit_user_store_role_path(user_store_role) %></td>
+          <td><%= link_to 'Delete', user_store_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
     <% end %>
     </tbody>

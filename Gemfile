@@ -62,3 +62,4 @@ gem 'paranoia', '~> 2.2'
 # paranoia gem is for soft deletes
 
 
+

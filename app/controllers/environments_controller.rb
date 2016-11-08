@@ -58,7 +58,7 @@ class EnvironmentsController < ApplicationController
   def destroy
     @environment.destroy
     respond_to do |format|
-      format.html { redirect_to environments_url, notice: 'Environment was successfully destroyed.' }
+      format.html { redirect_to environments_url, notice: 'Environment was successfully deleted.' }
       format.json { head :no_content }
     end
   end

@@ -30,7 +30,7 @@ class CertStoreRolesController < ApplicationController
 
     respond_to do |format|
       if @cert_store_role.save
-        format.html { redirect_to @cert_store_role, notice: 'Cert store role was successfully created.' }
+        format.html { redirect_to @cert_store_role, notice: 'Certificate role was successfully created.' }
         format.json { render :show, status: :created, location: @cert_store_role }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class CertStoreRolesController < ApplicationController
   def update
     respond_to do |format|
       if @cert_store_role.update(cert_store_role_params)
-        format.html { redirect_to @cert_store_role, notice: 'Cert store role was successfully updated.' }
+        format.html { redirect_to @cert_store_role, notice: 'Certificate role was successfully updated.' }
         format.json { render :show, status: :ok, location: @cert_store_role }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class CertStoreRolesController < ApplicationController
   def destroy
     @cert_store_role.destroy
     respond_to do |format|
-      format.html { redirect_to cert_store_roles_url, notice: 'Cert store role was successfully destroyed.' }
+      format.html { redirect_to cert_store_roles_url, notice: 'Certificate role was successfully deleted.' }
       format.json { head :no_content }
     end
   end

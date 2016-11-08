@@ -58,7 +58,7 @@ class UserGroupsController < ApplicationController
   def destroy
     @user_group.destroy
     respond_to do |format|
-      format.html { redirect_to user_groups_url, notice: 'User group was successfully destroyed.' }
+      format.html { redirect_to user_groups_url, notice: 'User group was successfully deleted.' }
       format.json { head :no_content }
     end
   end
