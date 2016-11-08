@@ -23,9 +23,9 @@
   <table>
     <thead>
     <tr>
-      <th>UserStore Name</th>
-      <th>CertStore Name</th>
-      <th>Network Username</th>
+      <th>Network ID</th>
+      <th>User Store Name</th>
+      <th>Certificate Name</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -33,10 +33,9 @@
     <tbody>
     <% @store_accesses.each do |store_access| %>
         <tr>
-
+          <td><%= store_access.NetworkId %></td>
           <td><%= store_access.UserStore.UserStoreName %></td>
           <td><%= store_access.CertStore.CertStoreName %></td>
-          <td><%= store_access.NetworkUser.NetworkUsername %></td>
           <td><%= link_to 'View', store_access %></td>
           <td><%= link_to 'Update', edit_store_access_path(store_access) %></td>
           <td><%= link_to 'Delete', store_access, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'certificates/index'
-
-  get 'certificates/new'
-
-  get 'certificates/create'
-
-  get 'certificates/destroy'
-
   devise_for :users
   resources :member_groups
   resources :user_groups
