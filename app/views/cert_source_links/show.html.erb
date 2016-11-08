@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Certificate Name:</strong>
   <%= @cert_source_link.CertStore.CertStoreName %>
@@ -34,6 +35,8 @@
   <strong>Is Deleted:</strong>
   <%= @cert_source_link.IsDeleted %>
 </p>
+    </div>
+  </div>
 
 <%= link_to 'Edit', edit_cert_source_link_path(@cert_source_link) %> |
 <%= link_to 'Back', cert_source_links_path %>

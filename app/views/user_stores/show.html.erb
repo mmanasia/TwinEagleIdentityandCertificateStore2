@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>User Store Name:</strong>
   <%= @user_store.UserStoreName %>
@@ -17,17 +18,17 @@
 
 <p>
   <strong>Source Description:</strong>
-  <%= @user_store.Source.SourceDescription %>
+  <%= @user_store.Source_id %>
 </p>
 
 <p>
   <strong>Environment Name:</strong>
-  <%= @user_store.Environment.EnvironmentName %>
+  <%= @user_store.Environment_id %>
 </p>
 
 <p>
   <strong>Identity Type Name:</strong>
-  <%= @user_store.IdentityType.IdentityTypeName %>
+  <%= @user_store.IdentityType_id %>
 </p>
 
 <p>
@@ -54,6 +55,8 @@
   <strong>Is Deleted:</strong>
   <%= @user_store.IsDeleted %>
 </p>
+    </div>
+  </div>
 
 <%= link_to 'Edit', edit_user_store_path(@user_store) %> |
 <%= link_to 'Back', user_stores_path %>

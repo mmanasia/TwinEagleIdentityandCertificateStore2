@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>User Store Name:</strong>
   <%= @store_access.UserStore.UserStoreName %>
@@ -39,6 +40,8 @@
   <strong>Is Deleted:</strong>
   <%= @store_access.IsDeleted %>
 </p>
+    </div>
+  </div>
 
 <%= link_to 'Edit', edit_store_access_path(@store_access) %> |
 <%= link_to 'Back', store_accesses_path %>

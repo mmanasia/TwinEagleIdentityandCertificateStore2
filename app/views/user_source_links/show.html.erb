@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>User Store Name:</strong>
   <%= @user_source_link.UserStore.UserStoreName %>
@@ -35,6 +36,8 @@
   <strong>Is Deleted:</strong>
   <%= @user_source_link.IsDeleted %>
 </p>
+    </div>
+  </div>
 
 <%= link_to 'Edit', edit_user_source_link_path(@user_source_link) %> |
 <%= link_to 'Back', user_source_links_path %>

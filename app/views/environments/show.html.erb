@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Environment Name:</strong>
   <%= @environment.EnvironmentName %>
@@ -34,6 +35,8 @@
   <strong>Is Deleted:</strong>
   <%= @environment.IsDeleted %>
 </p>
+</div>
+  </div>
 
 <%= link_to 'Edit', edit_environment_path(@environment) %> |
 <%= link_to 'Back', environments_path %>

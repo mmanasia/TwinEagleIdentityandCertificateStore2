@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Source Description:</strong>
   <%= @source.SourceDescription %>
@@ -29,6 +30,7 @@
   <strong>Is Deleted:</strong>
   <%= @source.IsDeleted %>
 </p>
+    </div></div>
 
 <%= link_to 'Edit', edit_source_path(@source) %> |
 <%= link_to 'Back', sources_path %>

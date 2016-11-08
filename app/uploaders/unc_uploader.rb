@@ -21,7 +21,7 @@ class UncUploader < CarrierWave::Uploader::Base
   end
 
   def content_type_whitelist
-    ['application/pkix-cert','application/x-x509-ca-cert','application/x-x509-user-cert',’application/x-pem-file’]
+    ['application/pkix-cert','application/x-x509-ca-cert','application/x-x509-user-cert','application/x-pem-file']
   end
 
 

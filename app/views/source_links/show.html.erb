@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Hyperlink:</strong>
   <%= @source_link.Hyperlink %>
@@ -29,6 +30,8 @@
   <strong>Is Deleted:</strong>
   <%= @source_link.IsDeleted %>
 </p>
+    </div>
+  </div>
 
 <%= link_to 'Edit', edit_source_link_path(@source_link) %> |
 <%= link_to 'Back', source_links_path %>

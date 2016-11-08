@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Certificate Name:</strong>
   <%= @cert_store.CertStoreName %>
@@ -32,17 +33,17 @@
 
 <p>
   <strong>Source Description:</strong>
-  <%= @cert_store.Source.SourceDescription %>
+  <%= @cert_store.Source_id %>
 </p>
 
 <p>
   <strong>Environment Name:</strong>
-  <%= @cert_store.Environment.EnvironmentName %>
+  <%= @cert_store.Environment_id %>
 </p>
 
 <p>
   <strong>Identity Type:</strong>
-  <%= @cert_store.IdentityType.IdentityTypeName %>
+  <%= @cert_store.IdentityType_id %>
 </p>
 
 <p>
@@ -69,6 +70,8 @@
   <strong>Is Deleted:</strong>
   <%= @cert_store.IsDeleted %>
 </p>
+    </div>
+  </div>
 
 <%= link_to 'Edit', edit_cert_store_path(@cert_store) %> |
 <%= link_to 'Back', cert_stores_path %>

@@ -7,7 +7,10 @@ class CertStore < ActiveRecord::Base
   has_many :cert_source_links
   has_many :cert_store_roles
 
-  validates :CertStoreName, :CertStoreDescription, :CertStorePassword, :CertStoreExpirationDate, :unc, :MimeType, :Source_id, :Environment_id, :IdentityType_id, presence: true
+  validates :CertStoreName, :CertStoreDescription, :CertStorePassword, :CertStoreExpirationDate, :MimeType, :Source_id, :Environment_id, :IdentityType_id, presence: true
+
+  accepts_nested_attributes_for :cert_source_links, reject_if: :all_blank, allow_destroy: true
+  accepts_nested_attributes_for :cert_store_roles, reject_if: :all_blank, allow_destroy: true
 
 
 end

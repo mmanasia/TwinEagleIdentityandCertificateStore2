@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>User Store Name:</strong>
   <%= @user_store_role.UserStore.UserStoreName %>
@@ -34,6 +35,8 @@
   <strong>Is Deleted:</strong>
   <%= @user_store_role.IsDeleted %>
 </p>
+    </div>
+  </div>
 
 <%= link_to 'Edit', edit_user_store_role_path(@user_store_role) %> |
 <%= link_to 'Back', user_store_roles_path %>

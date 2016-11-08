@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Source Description:</strong>
   <%= @role.Source.SourceDescription %>
@@ -34,6 +35,8 @@
   <strong>Is Deleted:</strong>
   <%= @role.IsDeleted %>
 </p>
+    </div>
+  </div>
 
 <%= link_to 'Edit', edit_role_path(@role) %> |
 <%= link_to 'Back', roles_path %>

@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>User Group Name:</strong>
   <%= @user_group.UserGroupName %>
@@ -29,6 +30,8 @@
   <strong>Is Deleted:</strong>
   <%= @user_group.IsDeleted %>
 </p>
+</div>
+  </div>
 
 <%= link_to 'Edit', edit_user_group_path(@user_group) %> |
 <%= link_to 'Back', user_groups_path %>
