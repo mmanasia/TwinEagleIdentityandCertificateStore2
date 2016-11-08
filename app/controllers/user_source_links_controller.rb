@@ -71,6 +71,6 @@ class UserSourceLinksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_source_link_params
-      params.require(:user_source_link).permit(:SourceLink_id, :UserStore_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
+      params.require(:user_source_link).permit(:source_link_id, :user_store_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
     end
 end

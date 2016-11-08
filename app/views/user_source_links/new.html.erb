@@ -15,12 +15,12 @@
 
     <div class="field">
       <%= f.label :'User Store Name' %><br>
-      <%= f.collection_select :UserStore_id, UserStore.all, :id, :UserStoreName, include_blank:true %>
+      <%= f.collection_select :user_store_id, UserStore.all, :id, :UserStoreName, include_blank:true %>
     </div>
 
     <div class="field">
       <%= f.label :'Hyperlink' %><br>
-      <%= f.collection_select :SourceLink_id, UserStore.all, :id, :UserStoreName, include_blank:true %>
+      <%= f.collection_select :source_link_id, UserStore.all, :id, :UserStoreName, include_blank:true %>
     </div>
     <div class="field">
       <%= f.label :'Created By' %><br>

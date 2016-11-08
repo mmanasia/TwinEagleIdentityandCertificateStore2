@@ -71,6 +71,6 @@ class CertSourceLinksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cert_source_link_params
-      params.require(:cert_source_link).permit(:SourceLink_id, :CertStore_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
+      params.require(:cert_source_link).permit(:source_link_id, :cert_store_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
     end
 end

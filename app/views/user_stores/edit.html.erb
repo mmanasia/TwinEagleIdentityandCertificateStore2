@@ -27,15 +27,15 @@
     </div>
     <div class="field">
       <%= f.label :'Source Description' %><br>
-      <%= f.collection_select :Source_id, Source.all, :id, :SourceDescription, include_blank:true %>
+      <%= f.collection_select :source_id, Source.all, :id, :SourceDescription, include_blank:true %>
     </div>
     <div class="field">
       <%= f.label :'Environment Name' %><br>
-      <%= f.collection_select :Environment_id, Environment.all, :id, :EnvironmentName, include_blank:true %>
+      <%= f.collection_select :environment_id, Environment.all, :id, :EnvironmentName, include_blank:true %>
     </div>
     <div class="field">
       <%= f.label :'Identity Type Name' %><br>
-      <%= f.collection_select :IdentityType_id, IdentityType.all, :id, :IdentityTypeName, include_blank:true %>
+      <%= f.collection_select :identity_type_id, IdentityType.all, :id, :IdentityTypeName, include_blank:true %>
     </div>
     <div class="field">
       <%= f.label :'Last Modified By' %><br>

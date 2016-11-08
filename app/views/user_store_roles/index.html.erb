@@ -34,8 +34,8 @@
     <tbody>
     <% @user_store_roles.each do |user_store_role| %>
         <tr>
-          <td><%= user_store_role.UserStore.UserStoreName %></td>
-          <td><%= user_store_role.Role.RoleDescription %></td>
+          <td><%= user_store_role.user_store.UserStoreName %></td>
+          <td><%= user_store_role.role.RoleDescription %></td>
           <td><%= link_to 'View', user_store_role %></td>
           <td><%= link_to 'Update', edit_user_store_role_path(user_store_role) %></td>
           <td><%= link_to 'Delete', user_store_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>

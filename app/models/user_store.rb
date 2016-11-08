@@ -5,6 +5,6 @@ class UserStore < ActiveRecord::Base
   has_many :user_source_links
   has_many :user_store_roles
 
-  validates :UserStoreName, :UserStorePassword, :UserStoreExpirationDate, :Source_id, :Environment_id, :IdentityType_id, presence: true
+  validates :UserStoreName, :UserStorePassword, :UserStoreExpirationDate, :source_id, :environment_id, :identity_type_id, presence: true
 
 end

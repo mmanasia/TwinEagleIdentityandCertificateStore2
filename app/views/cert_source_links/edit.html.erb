@@ -15,11 +15,11 @@
 
     <div class="field">
       <%= f.label :'Certificate Name' %><br>
-      <%= f.collection_select :CertStore_id, CertStore.all, :id, :CertStoreName, include_blank:true %>
+      <%= f.collection_select :cert_store_id, CertStore.all, :id, :CertStoreName, include_blank:true %>
     </div>
     <div class="field">
       <%= f.label :'Hyperlink' %><br>
-      <%= f.collection_select :SourceLink_id, SourceLink.all, :id, :Hyperlink, include_blank:true %>
+      <%= f.collection_select :source_link_id, SourceLink.all, :id, :Hyperlink, include_blank:true %>
     </div>
     <div class="field">
       <%= f.label :'Last Modified By' %><br>

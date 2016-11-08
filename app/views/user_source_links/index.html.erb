@@ -34,8 +34,8 @@
     <tbody>
     <% @user_source_links.each do |user_source_link| %>
         <tr>
-          <td><%= user_source_link.UserStore.UserStoreName %></td>
-          <td><%= user_source_link.SourceLink.Hyperlink %></td>
+          <td><%= user_source_link.user_store.UserStoreName %></td>
+          <td><%= user_source_link.source_link.Hyperlink %></td>
           <td><%= link_to 'View', user_source_link %></td>
           <td><%= link_to 'Update', edit_user_source_link_path(user_source_link) %></td>
           <td><%= link_to 'Delete', user_source_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>

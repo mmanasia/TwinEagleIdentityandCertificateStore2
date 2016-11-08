@@ -36,8 +36,8 @@
     <tbody>
     <% @cert_store_roles.each do |cert_store_role| %>
         <tr>
-          <td><%= cert_store_role.CertStore.CertStoreName %></td>
-          <td><%= cert_store_role.Role.RoleDescription %></td>
+          <td><%= cert_store_role.cert_store.CertStoreName %></td>
+          <td><%= cert_store_role.role.RoleDescription %></td>
           <td><%= link_to 'View', cert_store_role %></td>
           <td><%= link_to 'Update', edit_cert_store_role_path(cert_store_role) %></td>
           <td><%= link_to 'Delete', cert_store_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161106234734) do
+ActiveRecord::Schema.define(version: 20161108072051) do
 
   create_table "cert_source_links", force: :cascade do |t|
-    t.integer  "SourceLink_id"
-    t.integer  "CertStore_id"
+    t.integer  "source_link_id"
+    t.integer  "cert_store_id"
     t.string   "CreatedBy"
     t.datetime "CreatedDate"
     t.string   "LastModifiedBy"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 20161106234734) do
   end
 
   create_table "cert_store_roles", force: :cascade do |t|
-    t.integer  "Role_id"
-    t.integer  "CertStore_id"
+    t.integer  "role_id"
+    t.integer  "cert_store_id"
     t.string   "CreatedBy"
     t.datetime "CreatedDate"
     t.string   "LastModifiedBy"
@@ -44,9 +44,9 @@ ActiveRecord::Schema.define(version: 20161106234734) do
     t.datetime "CertStoreExpirationDate"
     t.string   "unc"
     t.string   "MimeType"
-    t.integer  "Source_id"
-    t.integer  "Environment_id"
-    t.integer  "IdentityType_id"
+    t.integer  "source_id"
+    t.integer  "environment_id"
+    t.integer  "identity_type_id"
     t.string   "CreatedBy"
     t.datetime "CreatedDate"
     t.string   "LastModifiedBy"
@@ -167,8 +167,8 @@ ActiveRecord::Schema.define(version: 20161106234734) do
 
   create_table "store_accesses", force: :cascade do |t|
     t.string   "NetworkId"
-    t.integer  "UserStore_id"
-    t.integer  "CertStore_id"
+    t.integer  "user_store_id"
+    t.integer  "cert_store_id"
     t.string   "CreatedBy"
     t.datetime "CreatedDate"
     t.string   "LastModifiedBy"
@@ -220,8 +220,8 @@ ActiveRecord::Schema.define(version: 20161106234734) do
   end
 
   create_table "user_source_links", force: :cascade do |t|
-    t.integer  "SourceLink_id"
-    t.integer  "UserStore_id"
+    t.integer  "source_link_id"
+    t.integer  "user_store_id"
     t.string   "CreatedBy"
     t.datetime "CreatedDate"
     t.string   "LastModifiedBy"
@@ -232,8 +232,8 @@ ActiveRecord::Schema.define(version: 20161106234734) do
   end
 
   create_table "user_store_roles", force: :cascade do |t|
-    t.integer  "Role_id"
-    t.integer  "UserStore_id"
+    t.integer  "role_id"
+    t.integer  "user_store_id"
     t.string   "CreatedBy"
     t.datetime "CreatedDate"
     t.string   "LastModifiedBy"
@@ -247,9 +247,9 @@ ActiveRecord::Schema.define(version: 20161106234734) do
     t.string   "UserStoreName"
     t.string   "UserStorePassword"
     t.datetime "UserStoreExpirationDate"
-    t.integer  "Source_id"
-    t.integer  "Environment_id"
-    t.integer  "IdentityType_id"
+    t.integer  "source_id"
+    t.integer  "environment_id"
+    t.integer  "identity_type_id"
     t.string   "CreatedBy"
     t.datetime "CreatedDate"
     t.string   "LastModifiedBy"

@@ -49,9 +49,9 @@
           <td><%= cert_store.CertStoreExpirationDate %></td>
           <td><%= link_to 'Download Certificate', cert_store.unc_url %></td>
           <td><%= cert_store.MimeType %></td>
-          <td><%= cert_store.Source_id %></td>
-          <td><%= cert_store.Environment_id %></td>
-          <td><%= cert_store.IdentityType_id %></td>
+          <td><%= cert_store.source.SourceDescription %></td>
+          <td><%= cert_store.environment.EnvironmentName %></td>
+          <td><%= cert_store.identity_type.IdentityTypeName %></td>
           <td><%= link_to 'View', cert_store %></td>
           <td><%= link_to 'Update', edit_cert_store_path(cert_store) %></td>
           <td><%= link_to 'Delete', cert_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>

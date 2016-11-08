@@ -3,6 +3,6 @@ class Role < ActiveRecord::Base
   has_many :cert_store_roles
   has_many :user_store_roles
 
-  validates :RoleDescription, :Source_id, presence: true
+  validates :RoleDescription, :source_id, presence: true
 
 end

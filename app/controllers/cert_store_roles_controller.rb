@@ -71,6 +71,6 @@ class CertStoreRolesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cert_store_role_params
-      params.require(:cert_store_role).permit(:Role_id, :CertStore_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
+      params.require(:cert_store_role).permit(:role_id, :cert_store_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
     end
 end

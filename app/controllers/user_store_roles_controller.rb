@@ -71,6 +71,6 @@ class UserStoreRolesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_store_role_params
-      params.require(:user_store_role).permit(:Role_id, :UserStore_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
+      params.require(:user_store_role).permit(:role_id, :user_store_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
     end
 end

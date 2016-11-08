@@ -71,6 +71,6 @@ class StoreAccessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def store_access_params
-      params.require(:store_access).permit(:NetworkId, :UserStore_id, :CertStore_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
+      params.require(:store_access).permit(:NetworkId, :user_store_id, :cert_store_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
     end
 end

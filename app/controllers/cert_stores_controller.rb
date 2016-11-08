@@ -72,6 +72,6 @@ class CertStoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cert_store_params
-      params.require(:cert_store).permit(:CertStoreName, :CertStoreDescription, :CertStorePassword, :CertStoreExpirationDate, :unc, :MimeType, :Source_id, :Environment_id, :IdentityType_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
+      params.require(:cert_store).permit(:CertStoreName, :CertStoreDescription, :CertStorePassword, :CertStoreExpirationDate, :unc, :MimeType, :source_id, :environment_id, :identity_type_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
     end
 end

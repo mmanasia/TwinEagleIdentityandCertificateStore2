@@ -36,8 +36,8 @@
     <tbody>
     <% @cert_source_links.each do |cert_source_link| %>
         <tr>
-          <td><%= cert_source_link.CertStore.CertStoreName %>
-          <td><%= cert_source_link.SourceLink.Hyperlink %></td>
+          <td><%= cert_source_link.cert_store.CertStoreName %>
+          <td><%= cert_source_link.source_link.Hyperlink %></td>
           <td><%= link_to 'View', cert_source_link %></td>
           <td><%= link_to 'Update', edit_cert_source_link_path(cert_source_link) %></td>
           <td><%= link_to 'Delete', cert_source_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>

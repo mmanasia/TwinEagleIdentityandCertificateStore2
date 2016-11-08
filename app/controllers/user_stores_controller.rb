@@ -71,6 +71,6 @@ class UserStoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_store_params
-      params.require(:user_store).permit(:UserStoreName, :UserStorePassword, :UserStoreExpirationDate, :Source_id, :Environment_id, :IdentityType_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
+      params.require(:user_store).permit(:UserStoreName, :UserStorePassword, :UserStoreExpirationDate, :source_id, :environment_id, :identity_type_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
     end
 end

@@ -15,11 +15,11 @@
 
     <div class="field">
       <%= f.label :'User Store Name' %><br>
-      <%= f.collection_select :UserStore_id, UserStore.all, :id, :UserStoreName, include_blank:true %>
+      <%= f.collection_select :user_store_id, UserStore.all, :id, :UserStoreName, include_blank:true %>
     </div>
     <div class="field">
       <%= f.label :'Certificate Name' %><br>
-      <%= f.collection_select :CertStore_id, CertStore.all, :id, :CertStoreName, include_blank:true %>
+      <%= f.collection_select :cert_store_id, CertStore.all, :id, :CertStoreName, include_blank:true %>
     </div>
     <div class="field">
       <%= f.label :'Network ID' %><br>
