@@ -11,32 +11,33 @@
     </div>
   <% end %>
 
+    <div class="field">
+      <%= f.label :'User Store Name' %><br>
+      <%= f.collection_select :UserStore_id, UserStore.all, :id, :UserStoreName, include_blank:true %>
+    </div>
+
   <div class="field">
-    <%= f.label :SourceLink_id %><br>
-    <%= f.number_field :SourceLink_id %>
+    <%= f.label :'Hyperlink' %><br>
+    <%= f.collection_select :SourceLink_id, UserStore.all, :id, :UserStoreName, include_blank:true %>
   </div>
   <div class="field">
-    <%= f.label :UserStore_id %><br>
-    <%= f.number_field :UserStore_id %>
-  </div>
-  <div class="field">
-    <%= f.label :CreatedBy %><br>
+    <%= f.label :'Created By' %><br>
     <%= f.text_field :CreatedBy %>
   </div>
   <div class="field">
-    <%= f.label :CreatedDate %><br>
+    <%= f.label :'Created Date' %><br>
     <%= f.datetime_select :CreatedDate %>
   </div>
   <div class="field">
-    <%= f.label :LastModifiedBy %><br>
+    <%= f.label :'Last Modified By' %><br>
     <%= f.text_field :LastModifiedBy %>
   </div>
   <div class="field">
-    <%= f.label :LastModifiedDate %><br>
+    <%= f.label :'Last Modified Date' %><br>
     <%= f.datetime_select :LastModifiedDate %>
   </div>
   <div class="field">
-    <%= f.label :IsDeleted %><br>
+    <%= f.label :'Is Deleted' %><br>
     <%= f.check_box :IsDeleted %>
   </div>
   <div class="actions">

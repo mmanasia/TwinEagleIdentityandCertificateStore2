@@ -1,6 +1,42 @@
 <h1>Editing User Store Role</h1>
 
-<%= render 'form' %>
+<%= form_for(@user_store_role) do |f| %>
+    <% if @user_store_role.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user_store_role.errors.count, "error") %> prohibited this user_store_role from being saved:</h2>
+
+          <ul>
+            <% @user_store_role.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :'User Store Name' %><br>
+      <%= f.collection_select :UserStore_id, UserStore.all, :id, :UserStoreName, include_blank:true %>
+    </div>
+    <div class="field">
+      <%= f.label :'Role Description' %><br>
+      <%= f.collection_select :Role_id, Role.all, :id, :RoleDescription, include_blank:true %>
+    </div>
+    <div class="field">
+      <%= f.label :'Last Modified By' %><br>
+      <%= f.text_field :LastModifiedBy %>
+    </div>
+    <div class="field">
+      <%= f.label :'Last Modified Date' %><br>
+      <%= f.datetime_select :LastModifiedDate %>
+    </div>
+    <div class="field">
+      <%= f.label :'Is Deleted' %><br>
+      <%= f.check_box :IsDeleted %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
 
 <%= link_to 'Show', @user_store_role %> |
 <%= link_to 'Back', user_store_roles_path %>

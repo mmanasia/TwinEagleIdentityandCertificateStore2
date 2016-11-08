@@ -1,5 +1,37 @@
-<h1>New Cert Store Role</h1>
+<h1>New Certificate Role</h1>
 
-<%= render 'form' %>
+<%= form_for(@cert_store_role) do |f| %>
+    <% if @cert_store_role.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@cert_store_role.errors.count, "error") %> prohibited this cert_store_role from being saved:</h2>
+
+          <ul>
+            <% @cert_store_role.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :'Certificate Name' %><br>
+      <%= f.collection_select :CertStore_id, CertStore.all, :id, :CertStoreName, include_blank:true %>
+    </div>
+    <div class="field">
+      <%= f.label :'Role Description' %><br>
+      <%= f.collection_select :Role_id, Role.all, :id, :RoleDescription, include_blank:true %>
+    </div>
+    <div class="field">
+      <%= f.label :'Created By' %><br>
+      <%= f.text_field :CreatedBy %>
+    </div>
+    <div class="field">
+      <%= f.label :'Created Date' %><br>
+      <%= f.datetime_select :CreatedDate %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
 
 <%= link_to 'Back', cert_store_roles_path %>

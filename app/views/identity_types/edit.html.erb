@@ -1,6 +1,43 @@
 <h1>Editing Identity Type</h1>
 
-<%= render 'form' %>
+<%= form_for(@identity_type) do |f| %>
+    <% if @identity_type.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@identity_type.errors.count, "error") %> prohibited this identity_type from being saved:</h2>
+
+          <ul>
+            <% @identity_type.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :'Identity Type Name' %><br>
+      <%= f.text_area :IdentityTypeName, :cols => "40", :rows => "0" %>
+    </div>
+    <div class="field">
+      <%= f.label :'Identity Type Description' %><br>
+      <%= f.text_area :IdentityTypeDescription, :cols => "40", :rows => "5" %>
+    </div>
+    <div class="field">
+      <%= f.label :'Last Modified By' %><br>
+      <%= f.text_field :LastModifiedBy %>
+    </div>
+    <div class="field">
+      <%= f.label :'Last Modified Date' %><br>
+      <%= f.datetime_select :LastModifiedDate %>
+    </div>
+    <div class="field">
+      <%= f.label :'Is Deleted' %><br>
+      <%= f.check_box :IsDeleted %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
 
 <%= link_to 'Show', @identity_type %> |
 <%= link_to 'Back', identity_types_path %>

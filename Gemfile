@@ -53,6 +53,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pundit'
 
 gem 'devise'
+# devise gem is for user authentication
 
 gem 'carrierwave'
+# carrierwave gem is for unc uploader
+
+gem 'paranoia', '~> 2.2'
+# paranoia gem is for soft deletes
+
 

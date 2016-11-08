@@ -1,6 +1,39 @@
 <h1>Editing Source Link</h1>
 
-<%= render 'form' %>
+<%= form_for(@source_link) do |f| %>
+    <% if @source_link.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@source_link.errors.count, "error") %> prohibited this source_link from being saved:</h2>
+
+          <ul>
+            <% @source_link.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :Hyperlink %><br>
+      <%= f.text_area :Hyperlink, :cols => "40", :rows => "5" %>
+    </div>
+    <div class="field">
+      <%= f.label :'Last Modified By' %><br>
+      <%= f.text_field :LastModifiedBy %>
+    </div>
+    <div class="field">
+      <%= f.label :'Last Modified Date' %><br>
+      <%= f.datetime_select :LastModifiedDate %>
+    </div>
+    <div class="field">
+      <%= f.label :'Is Deleted' %><br>
+      <%= f.check_box :IsDeleted %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
 
 <%= link_to 'Show', @source_link %> |
 <%= link_to 'Back', source_links_path %>

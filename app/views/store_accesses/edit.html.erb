@@ -1,6 +1,46 @@
 <h1>Editing Store Access</h1>
 
-<%= render 'form' %>
+<%= form_for(@store_access) do |f| %>
+    <% if @store_access.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@store_access.errors.count, "error") %> prohibited this store_access from being saved:</h2>
+
+          <ul>
+            <% @store_access.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :'User Store Name' %><br>
+      <%= f.collection_select :UserStore_id, UserStore.all, :id, :UserStoreName, include_blank:true %>
+    </div>
+    <div class="field">
+      <%= f.label :'Certificate Name' %><br>
+      <%= f.collection_select :CertStore_id, CertStore.all, :id, :CertStoreName, include_blank:true %>
+    </div>
+    <div class="field">
+      <%= f.label :'Network ID' %><br>
+      <%= f.text_area :NetworkId, :cols => "40", :rows => "0" %>
+    </div>
+    <div class="field">
+      <%= f.label :LastModifiedBy %><br>
+      <%= f.text_field :LastModifiedBy %>
+    </div>
+    <div class="field">
+      <%= f.label :LastModifiedDate %><br>
+      <%= f.datetime_select :LastModifiedDate %>
+    </div>
+    <div class="field">
+      <%= f.label :IsDeleted %><br>
+      <%= f.check_box :IsDeleted %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
 
 <%= link_to 'Show', @store_access %> |
 <%= link_to 'Back', store_accesses_path %>

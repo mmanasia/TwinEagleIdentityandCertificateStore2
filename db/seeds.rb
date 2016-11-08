@@ -13,7 +13,6 @@ CertStore.delete_all
 Environment.delete_all
 IdentityType.delete_all
 MemberGroup.delete_all
-NetworkUser.delete_all
 Role.delete_all
 SourceLink.delete_all
 Source.delete_all

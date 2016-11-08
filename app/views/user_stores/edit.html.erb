@@ -1,6 +1,58 @@
 <h1>Editing User Store</h1>
 
-<%= render 'form' %>
+<%= form_for(@user_store) do |f| %>
+    <% if @user_store.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user_store.errors.count, "error") %> prohibited this user_store from being saved:</h2>
+
+          <ul>
+            <% @user_store.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :'User Store Name' %><br>
+      <%= f.text_area :UserStoreName, :cols => "40", :rows => "0" %>
+    </div>
+    <div class="field">
+      <%= f.label :'User Store Password' %><br>
+      <%= f.text_area :UserStorePassword, :cols => "40", :rows => "0" %>
+    </div>
+    <div class="field">
+      <%= f.label :'User Store Expiration Date' %><br>
+      <%= f.datetime_select :UserStoreExpirationDate %>
+    </div>
+    <div class="field">
+      <%= f.label :'Source Description' %><br>
+      <%= f.collection_select :Source_id, Source.all, :id, :SourceDescription, include_blank:true %>
+    </div>
+    <div class="field">
+      <%= f.label :'Environment Name' %><br>
+      <%= f.collection_select :Environment_id, Environment.all, :id, :EnvironmentName, include_blank:true %>
+    </div>
+    <div class="field">
+      <%= f.label :'Identity Type Name' %><br>
+      <%= f.collection_select :IdentityType_id, IdentityType.all, :id, :IdentityTypeName, include_blank:true %>
+    </div>
+    <div class="field">
+      <%= f.label :'Last Modified By' %><br>
+      <%= f.text_field :LastModifiedBy %>
+    </div>
+    <div class="field">
+      <%= f.label :'Last Modified Date' %><br>
+      <%= f.datetime_select :LastModifiedDate %>
+    </div>
+    <div class="field">
+      <%= f.label :'Is Deleted' %><br>
+      <%= f.check_box :IsDeleted %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
 
 <%= link_to 'Show', @user_store %> |
 <%= link_to 'Back', user_stores_path %>

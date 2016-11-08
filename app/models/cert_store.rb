@@ -9,4 +9,5 @@ class CertStore < ActiveRecord::Base
 
   validates :CertStoreName, :CertStoreDescription, :CertStorePassword, :CertStoreExpirationDate, :unc, :MimeType, :Source_id, :Environment_id, :IdentityType_id, presence: true
 
+
 end

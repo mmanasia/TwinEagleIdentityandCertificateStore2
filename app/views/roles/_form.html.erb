@@ -11,14 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :'Role Description' %><br>
-    <%= f.text_field :RoleDescription %>
-  </div>
+
   <div class="field">
     <%= f.label :'Source Name' %><br>
     <%= f.collection_select :Source_id, Source.all, :id, :SourceName, include_blank:true %>
   </div>
+    <div class="field">
+      <%= f.label :'Role Description' %><br>
+      <%= f.text_area :RoleDescription, :cols => "40", :rows => "5" %>
+    </div>
   <div class="field">
     <%= f.label :'Created By' %><br>
     <%= f.text_field :CreatedBy %>

@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :NetworkId %><br>
-    <%= f.text_field :NetworkId %>
+    <%= f.label :'User Store Name' %><br>
+    <%= f.collection_select :UserStore_id, UserStore.all, :id, :UserStoreName, include_blank:true %>
   </div>
   <div class="field">
-    <%= f.label :UserStore_id %><br>
-    <%= f.number_field :UserStore_id %>
+    <%= f.label :'Certificate Name' %><br>
+    <%= f.collection_select :CertStore_id, CertStore.all, :id, :CertStoreName, include_blank:true %>
   </div>
-  <div class="field">
-    <%= f.label :CertStore_id %><br>
-    <%= f.number_field :CertStore_id %>
-  </div>
+    <div class="field">
+      <%= f.label :'Network ID' %><br>
+      <%= f.text_area :NetworkId, :cols => "40", :rows => "0" %>
+    </div>
   <div class="field">
     <%= f.label :CreatedBy %><br>
     <%= f.text_field :CreatedBy %>

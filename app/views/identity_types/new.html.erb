@@ -1,5 +1,38 @@
 <h1>New Identity Type</h1>
 
-<%= render 'form' %>
+<%= form_for(@identity_type) do |f| %>
+    <% if @identity_type.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@identity_type.errors.count, "error") %> prohibited this identity_type from being saved:</h2>
+
+          <ul>
+            <% @identity_type.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :'Identity Type Name' %><br>
+      <%= f.text_area :IdentityTypeName, :cols => "40", :rows => "0" %>
+    </div>
+    <div class="field">
+      <%= f.label :'Identity Type Description' %><br>
+      <%= f.text_area :IdentityTypeDescription, :cols => "40", :rows => "5" %>
+    </div>
+    <div class="field">
+      <%= f.label :'Created By' %><br>
+      <%= f.text_field :CreatedBy %>
+    </div>
+    <div class="field">
+      <%= f.label :'Created Date' %><br>
+      <%= f.datetime_select :CreatedDate %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
 
 <%= link_to 'Back', identity_types_path %>

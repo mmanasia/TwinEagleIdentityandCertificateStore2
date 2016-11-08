@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :'Certificate Name' %><br>
-    <%= f.text_field :CertStoreName %>
+    <%= f.text_area :CertStoreName, :cols => "40", :rows => "0" %>
   </div>
   <div class="field">
     <%= f.label :'Certificate Description' %><br>
-    <%= f.text_field :CertStoreDescription %>
+    <%= f.text_area :CertStoreDescription, :cols => "40", :rows => "5" %>
   </div>
   <div class="field">
     <%= f.label :'Certificate Password' %><br>
-    <%= f.text_field :CertStorePassword %>
+    <%= f.text_area :CertStorePassword, :cols => "40", :rows => "0" %>
   </div>
   <div class="field">
     <%= f.label :'Certificate Expiration Date' %><br>
@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :'Mime Type' %><br>
-    <%= f.text_field :MimeType %>
+    <%= f.text_area :MimeType, :cols => "40", :rows => "0" %>
   </div>
   <div class="field">
     <%= f.label :'Source Description' %><br>

@@ -1,5 +1,33 @@
 <h1>New Source</h1>
 
-<%= render 'form' %>
+<%= form_for(@source) do |f| %>
+    <% if @source.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@source.errors.count, "error") %> prohibited this source from being saved:</h2>
+
+          <ul>
+            <% @source.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :'Source Description' %><br>
+      <%= f.text_area :SourceDescription, :cols => "40", :rows => "5" %>
+    </div>
+    <div class="field">
+      <%= f.label :'Created By' %><br>
+      <%= f.text_field :CreatedBy %>
+    </div>
+    <div class="field">
+      <%= f.label :'Created Date' %><br>
+      <%= f.datetime_select :CreatedDate %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
 
 <%= link_to 'Back', sources_path %>

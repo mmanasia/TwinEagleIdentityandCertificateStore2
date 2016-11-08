@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :'UserStore Name' %><br>
-    <%= f.text_field :UserStoreName %>
+    <%= f.label :'User Store Name' %><br>
+    <%= f.text_area :UserStoreName, :cols => "40", :rows => "0" %>
   </div>
   <div class="field">
-    <%= f.label :'UserStore Password' %><br>
-    <%= f.text_field :UserStorePassword %>
+    <%= f.label :'User Store Password' %><br>
+    <%= f.text_area :UserStorePassword, :cols => "40", :rows => "0" %>
   </div>
   <div class="field">
-    <%= f.label :'UserStore Expiration Date' %><br>
+    <%= f.label :'User Store Expiration Date' %><br>
     <%= f.datetime_select :UserStoreExpirationDate %>
   </div>
   <div class="field">
