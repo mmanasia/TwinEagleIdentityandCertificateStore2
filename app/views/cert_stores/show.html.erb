@@ -23,7 +23,7 @@
 
 <p>
   <strong>Certificate File:</strong>
-  <%= @cert_store.unc %>
+    <td><%= link_to 'Download Certificate', cert_store.unc %></td>
 </p>
 
 <p>
@@ -45,7 +45,11 @@
   <strong>Identity Type:</strong>
   <%= @cert_store.IdentityType_id %>
 </p>
+</div>
+  </div>
 
+  <div class="panel panel-default">
+    <div class="panel-body">
 <p>
   <strong>Created By:</strong>
   <%= @cert_store.CreatedBy %>
@@ -70,8 +74,8 @@
   <strong>Is Deleted:</strong>
   <%= @cert_store.IsDeleted %>
 </p>
-    </div>
   </div>
+    </div>
 
 <%= link_to 'Edit', edit_cert_store_path(@cert_store) %> |
 <%= link_to 'Back', cert_stores_path %>

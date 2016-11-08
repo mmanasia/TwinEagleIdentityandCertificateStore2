@@ -47,7 +47,7 @@
           <td><%= cert_store.CertStoreDescription %></td>
           <td><%= cert_store.CertStorePassword %></td>
           <td><%= cert_store.CertStoreExpirationDate %></td>
-          <td><%= link_to 'Download Certificate', certificate.unc_url %></td>
+          <td><%= link_to 'Download Certificate', cert_store.unc %></td>
           <td><%= cert_store.MimeType %></td>
           <td><%= cert_store.Source.SourceDescription %></td>
           <td><%= cert_store.Environment.EnvironmentName %></td>
