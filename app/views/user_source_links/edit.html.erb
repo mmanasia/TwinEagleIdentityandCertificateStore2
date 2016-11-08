@@ -1,4 +1,4 @@
-<h1>Editing User Source Link</h1>
+<h1>Editing User Store Source Link</h1>
 
 <%= form_for(@user_source_link) do |f| %>
     <% if @user_source_link.errors.any? %>
@@ -20,7 +20,7 @@
 
     <div class="field">
       <%= f.label :'Hyperlink' %><br>
-      <%= f.collection_select :source_link_id, UserStore.all, :id, :UserStoreName, include_blank:true %>
+      <%= f.collection_select :source_link_id, SourceLink.all, :id, :Hyperlink, include_blank:true %>
     </div>
     <div class="field">
       <%= f.label :'Last Modified By' %><br>
