@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161108213555) do
+ActiveRecord::Schema.define(version: 20161109002902) do
 
   create_table "cert_source_links", force: :cascade do |t|
     t.integer  "source_link_id"
