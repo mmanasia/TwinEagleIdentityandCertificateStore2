@@ -61,5 +61,12 @@ gem 'carrierwave'
 gem 'paranoia', '~> 2.2'
 # paranoia gem is for soft deletes
 
+gem 'coffee-script-source', '1.10.0'
+# fixes compatibility issues in Windows OS
 
+gem 'activerecord-sqlserver-adapter'
+# gem 'tiny_tds', '1.0.4'
+# allows connection between application and SQL Server
 
+# gem 'secondbase'
+# allows connection to more than one database
