@@ -4,7 +4,7 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :'Network Username' %><br />
+    <%= f.label :'Network Email' %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -35,9 +35,5 @@
     <%= f.submit "Update" %>
   </div>
 <% end %>
-
-<h3>Cancel my account</h3>
-
-<p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>

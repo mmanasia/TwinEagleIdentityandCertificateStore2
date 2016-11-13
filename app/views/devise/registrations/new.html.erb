@@ -3,10 +3,10 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :'Network username' %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+    <div class="field">
+      <%= f.label :'Network email' %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
 
   <div class="field">
     <%= f.label :password %>
@@ -20,6 +20,10 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+    <div class="field">
+      <%= f.label :user_group_id %><br />
+      <%= f.collection_select :user_group_id, UserGroup.all,:id,:UserGroupName %>
+    </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>

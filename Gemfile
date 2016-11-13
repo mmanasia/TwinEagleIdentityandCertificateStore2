@@ -70,3 +70,6 @@ gem 'activerecord-sqlserver-adapter'
 
 # gem 'secondbase'
 # allows connection to more than one database
+
+gem 'rails_admin'
+# admin panel
