@@ -18,6 +18,10 @@
       <%= f.text_area :UserGroupName, :cols => "40", :rows => "0" %>
     </div>
     <div class="field">
+      <%= f.label :'Admin?' %><br>
+      <%= f.check_box :admin %>
+    </div>
+    <div class="field">
       <%= f.label :'Last Modified By' %><br>
       <%= f.text_field :LastModifiedBy %>
     </div>

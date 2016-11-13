@@ -28,6 +28,7 @@
     <thead>
     <tr>
       <th>User Group Name</th>
+      <th>Admin?</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -36,6 +37,7 @@
     <% @user_groups.each do |user_group| %>
         <tr>
           <td><%= user_group.UserGroupName %></td>
+          <td><%= user_group.admin %></td>
           <td><%= link_to 'View', user_group %></td>
           <td><%= link_to 'Update', edit_user_group_path(user_group) %></td>
           <td><%= link_to 'Delete', user_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>

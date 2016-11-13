@@ -17,6 +17,7 @@ class CertStoresController < ApplicationController
 
   # GET /cert_stores/new
   def new
+    authorize @cert_store
     @cert_store = CertStore.new
   end
 
@@ -57,6 +58,7 @@ class CertStoresController < ApplicationController
   # DELETE /cert_stores/1
   # DELETE /cert_stores/1.json
   def destroy
+    authorize @cert_store
     @cert_store.destroy
     respond_to do |format|
       format.html { redirect_to cert_stores_url, notice: 'Certificate was successfully deleted.' }

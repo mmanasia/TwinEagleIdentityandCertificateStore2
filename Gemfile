@@ -51,6 +51,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pundit'
+# rails authorization
 
 gem 'devise'
 # devise gem is for user authentication

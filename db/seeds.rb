@@ -41,8 +41,8 @@ Source.create(SourceDescription: 'Source Description Sample 3')
 Source.create(SourceDescription: 'Source Description Sample 4')
 Source.create(SourceDescription: 'Source Description Sample 5')
 
-UserGroup.create({:id => 1, :UserGroupName => 'System'})
-UserGroup.create({:id => 2, :UserGroupName => 'IT Support'})
-UserGroup.create({:id => 3, :UserGroupName => 'System Manager'})
+UserGroup.create(:id => 1, UserGroupName:'System', admin: false )
+UserGroup.create(:id => 2, UserGroupName: 'IT Support', admin: true)
+UserGroup.create(:id => 3, UserGroupName:'System Manager', admin: true)
 
 

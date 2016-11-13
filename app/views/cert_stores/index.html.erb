@@ -54,7 +54,11 @@
           <td><%= cert_store.identity_type.IdentityTypeName %></td>
           <td><%= link_to 'View', cert_store %></td>
           <td><%= link_to 'Update', edit_cert_store_path(cert_store) %></td>
-          <td><%= link_to 'Delete', cert_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <% if policy(post).destroy? %>
+              <td><%= link_to 'Delete', cert_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>
