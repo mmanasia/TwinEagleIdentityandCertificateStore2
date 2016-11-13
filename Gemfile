@@ -73,3 +73,6 @@ gem 'activerecord-sqlserver-adapter'
 
 gem 'rails_admin'
 # admin panel
+
+gem 'rails4-autocomplete'
+# autocomplete gem

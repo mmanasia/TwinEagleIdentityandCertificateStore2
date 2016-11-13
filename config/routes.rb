@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   resources :user_store_roles
   resources :cert_store_roles
   resources :user_stores
-  resources :cert_stores
+  resources :cert_stores do
+    get :autocomplete_cert_store, :on => :collection
+  end
   resources :identity_types
   resources :environments
   resources :source_links
