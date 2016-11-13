@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161109002902) do
+ActiveRecord::Schema.define(version: 20161113044234) do
 
   create_table "cert_source_links", force: :cascade do |t|
     t.integer  "source_link_id"
@@ -56,17 +56,6 @@ ActiveRecord::Schema.define(version: 20161109002902) do
     t.datetime "updated_at",              null: false
   end
 
-  create_table "certificates", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.string   "password"
-    t.datetime "expiration"
-    t.string   "unc"
-    t.string   "mimetype"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "environments", force: :cascade do |t|
     t.string   "EnvironmentName"
     t.string   "EnvironmentDescription"
@@ -102,34 +91,6 @@ ActiveRecord::Schema.define(version: 20161109002902) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
-
-  create_table "network_users", force: :cascade do |t|
-    t.string   "NetworkFirstName"
-    t.string   "NetworkLastName"
-    t.string   "Email"
-    t.string   "NetworkUsername"
-    t.string   "NetworkPassword"
-    t.string   "CreatedBy"
-    t.datetime "CreatedDate"
-    t.string   "LastModifiedBy"
-    t.datetime "LastModifiedDate"
-    t.boolean  "IsDeleted"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "username",               default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-  end
-
-  add_index "network_users", ["reset_password_token"], name: "index_network_users_on_reset_password_token", unique: true
-  add_index "network_users", ["username"], name: "index_network_users_on_username", unique: true
 
   create_table "roles", force: :cascade do |t|
     t.string   "RoleDescription"
@@ -270,6 +231,9 @@ ActiveRecord::Schema.define(version: 20161109002902) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "failed_attempts",        default: 0,  null: false
+    t.string   "unlock_token"
+    t.datetime "locked_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
