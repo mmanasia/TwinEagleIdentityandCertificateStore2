@@ -22,5 +22,7 @@
 en:
  pundit:
    default: 'You cannot perform this action.'
-   post_policy:
+   cert_store_policy:
      destroy?: 'You cannot delete this!'
+      user_store_policy:
+          destroy?: 'You cannot delete this!'
