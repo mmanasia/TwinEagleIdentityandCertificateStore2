@@ -10,7 +10,12 @@ class ApplicationController < ActionController::Base
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   protected
 
-  private
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password,:password_confirmation, :user_group_id ])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:email, :password,:password_confirmation])
+  end
+
+  # private
 
   def user_not_authorized
     flash[:alert]= "You are not authorized to make changes."
