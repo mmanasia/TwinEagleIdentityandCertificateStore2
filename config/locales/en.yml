@@ -24,5 +24,3 @@ en:
    default: 'You cannot perform this action.'
    cert_store_policy:
      destroy?: 'You cannot delete this!'
-      user_store_policy:
-          destroy?: 'You cannot delete this!'

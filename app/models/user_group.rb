@@ -1,4 +1,6 @@
 class UserGroup < ActiveRecord::Base
+  acts_as_paranoid
+
   has_many :member_groups
   has_many :users
   has_many :cert_store_roles

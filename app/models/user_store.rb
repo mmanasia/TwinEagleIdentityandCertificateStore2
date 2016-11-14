@@ -1,4 +1,6 @@
 class UserStore < ActiveRecord::Base
+  acts_as_paranoid
+
   belongs_to :source
   belongs_to :environment
   belongs_to :identity_type
