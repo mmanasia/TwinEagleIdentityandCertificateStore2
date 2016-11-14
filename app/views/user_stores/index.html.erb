@@ -47,12 +47,16 @@
           <td><%= user_store.environment.EnvironmentName %></td>
           <td><%= user_store.identity_type.IdentityTypeName %></td>
           <td><%= link_to 'View', user_store %></td>
-          <td><%= link_to 'Update', edit_user_store_path(user_store) %></td>
+
+          <% if policy(user_store).update? %>
+              <td><%= link_to 'Update', edit_user_store_path(user_store) %></td>
+          <% end %>
 
           <% if policy(user_store).destroy? %>
               <td><%= link_to 'Delete', user_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>        </tr>
+          <% end %>
 
+        </tr>
     <% end %>
     </tbody>
   </table>

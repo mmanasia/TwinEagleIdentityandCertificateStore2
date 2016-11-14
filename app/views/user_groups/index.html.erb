@@ -39,8 +39,15 @@
           <td><%= user_group.UserGroupName %></td>
           <td><%= user_group.admin %></td>
           <td><%= link_to 'View', user_group %></td>
-          <td><%= link_to 'Update', edit_user_group_path(user_group) %></td>
-          <td><%= link_to 'Delete', user_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <% if policy(user_group).update? %>
+              <td><%= link_to 'Update', edit_user_group_path(user_group) %></td>
+          <% end %>
+
+          <% if policy(user_group).destroy? %>
+              <td><%= link_to 'Delete', user_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>

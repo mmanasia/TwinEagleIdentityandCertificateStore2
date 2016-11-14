@@ -40,8 +40,15 @@
           <td><%= identity_type.IdentityTypeName %></td>
           <td><%= identity_type.IdentityTypeDescription %></td>
           <td><%= link_to 'View', identity_type %></td>
-          <td><%= link_to 'Update', edit_identity_type_path(identity_type) %></td>
-          <td><%= link_to 'Delete', identity_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <% if policy(identity_type).update? %>
+              <td><%= link_to 'Update', edit_identity_type_path(identity_type) %></td>
+          <% end %>
+
+          <% if policy(identity_type).destroy? %>
+              <td><%= link_to 'Delete', identity_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>

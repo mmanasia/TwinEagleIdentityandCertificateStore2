@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161113075334) do
+ActiveRecord::Schema.define(version: 20161113231923) do
 
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -28,7 +28,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "cert_source_links", ["user_group_id"], name: "index_cert_source_links_on_user_group_id"
 
   create_table "cert_store_roles", force: :cascade do |t|
     t.integer  "role_id"
@@ -40,7 +43,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "cert_store_roles", ["user_group_id"], name: "index_cert_store_roles_on_user_group_id"
 
   create_table "cert_stores", force: :cascade do |t|
     t.string   "CertStoreName"
@@ -59,7 +65,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "cert_stores", ["user_group_id"], name: "index_cert_stores_on_user_group_id"
 
   create_table "environments", force: :cascade do |t|
     t.string   "EnvironmentName"
@@ -71,7 +80,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "environments", ["user_group_id"], name: "index_environments_on_user_group_id"
 
   create_table "identity_types", force: :cascade do |t|
     t.string   "IdentityTypeName"
@@ -83,7 +95,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "identity_types", ["user_group_id"], name: "index_identity_types_on_user_group_id"
 
   create_table "member_groups", force: :cascade do |t|
     t.integer  "NetworkUser_id"
@@ -95,7 +110,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "member_groups", ["user_group_id"], name: "index_member_groups_on_user_group_id"
 
   create_table "roles", force: :cascade do |t|
     t.string   "RoleDescription"
@@ -107,7 +125,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "roles", ["user_group_id"], name: "index_roles_on_user_group_id"
 
   create_table "source_links", force: :cascade do |t|
     t.string   "Hyperlink"
@@ -118,7 +139,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "source_links", ["user_group_id"], name: "index_source_links_on_user_group_id"
 
   create_table "sources", force: :cascade do |t|
     t.string   "SourceDescription"
@@ -129,7 +153,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "sources", ["user_group_id"], name: "index_sources_on_user_group_id"
 
   create_table "store_accesses", force: :cascade do |t|
     t.string   "NetworkId"
@@ -142,7 +169,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "store_accesses", ["user_group_id"], name: "index_store_accesses_on_user_group_id"
 
   create_table "teics_audit_logs", force: :cascade do |t|
     t.integer  "RecordId"
@@ -196,7 +226,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "user_source_links", ["user_group_id"], name: "index_user_source_links_on_user_group_id"
 
   create_table "user_store_roles", force: :cascade do |t|
     t.integer  "role_id"
@@ -208,7 +241,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "user_store_roles", ["user_group_id"], name: "index_user_store_roles_on_user_group_id"
 
   create_table "user_stores", force: :cascade do |t|
     t.string   "UserStoreName"
@@ -224,7 +260,10 @@ ActiveRecord::Schema.define(version: 20161113075334) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.integer  "user_group_id"
   end
+
+  add_index "user_stores", ["user_group_id"], name: "index_user_stores_on_user_group_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

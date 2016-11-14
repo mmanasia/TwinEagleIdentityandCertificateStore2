@@ -37,8 +37,15 @@
         <tr>
           <td><%= source.SourceDescription %></td>
           <td><%= link_to 'View', source %></td>
-          <td><%= link_to 'Update', edit_source_path(source) %></td>
-          <td><%= link_to 'Delete', source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <% if policy(source).update? %>
+              <td><%= link_to 'Update', edit_source_path(source) %></td>
+          <% end %>
+
+          <% if policy(source).destroy? %>
+              <td><%= link_to 'Delete', source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>

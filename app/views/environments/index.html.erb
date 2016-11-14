@@ -40,8 +40,15 @@
           <td><%= environment.EnvironmentName %></td>
           <td><%= environment.EnvironmentDescription %></td>
           <td><%= link_to 'View', environment %></td>
-          <td><%= link_to 'Update', edit_environment_path(environment) %></td>
-          <td><%= link_to 'Delete', environment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <% if policy(environment).update? %>
+              <td><%= link_to 'Update', edit_environment_path(environment) %></td>
+          <% end %>
+
+          <% if policy(environment).destroy? %>
+              <td><%= link_to 'Delete', environment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>

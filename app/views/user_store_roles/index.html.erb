@@ -37,8 +37,15 @@
           <td><%= user_store_role.user_store.UserStoreName %></td>
           <td><%= user_store_role.role.RoleDescription %></td>
           <td><%= link_to 'View', user_store_role %></td>
-          <td><%= link_to 'Update', edit_user_store_role_path(user_store_role) %></td>
-          <td><%= link_to 'Delete', user_store_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <% if policy(user_store_role).update? %>
+              <td><%= link_to 'Update', edit_user_store_role_path(user_store_role) %></td>
+          <% end %>
+
+          <% if policy(user_store_role).destroy? %>
+              <td><%= link_to 'Delete', user_store_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>

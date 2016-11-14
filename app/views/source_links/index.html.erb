@@ -37,8 +37,15 @@
         <tr>
           <td><%= source_link.Hyperlink %></td>
           <td><%= link_to 'View', source_link %></td>
-          <td><%= link_to 'Update', edit_source_link_path(source_link) %></td>
-          <td><%= link_to 'Delete', source_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <% if policy(source_link).update? %>
+              <td><%= link_to 'Update', edit_source_link_path(source_link) %></td>
+          <% end %>
+
+          <% if policy(source_link).destroy? %>
+              <td><%= link_to 'Delete', source_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>

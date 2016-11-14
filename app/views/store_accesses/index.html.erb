@@ -42,8 +42,15 @@
           <td><%= store_access.cert_store.CertStoreName %></td>
           <td><%= store_access.NetworkId %></td>
           <td><%= link_to 'View', store_access %></td>
-          <td><%= link_to 'Update', edit_store_access_path(store_access) %></td>
-          <td><%= link_to 'Delete', store_access, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <% if policy(store_access).update? %>
+              <td><%= link_to 'Update', edit_store_access_path(store_access) %></td>
+          <% end %>
+
+          <% if policy(store_access).destroy? %>
+              <td><%= link_to 'Delete', store_access, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>

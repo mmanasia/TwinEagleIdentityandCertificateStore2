@@ -37,9 +37,15 @@
           <td><%= member_group.NetworkUser.NetworkUsername %></td>
           <td><%= member_group.UserGroup.UserGroupName %></td>
           <td><%= link_to 'Show', member_group %></td>
-          <td><%= link_to 'Edit', edit_member_group_path(member_group) %></td>
-          <td><%= link_to 'Destroy', member_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+
+          <% if policy(member_group).update? %>
+              <td><%= link_to 'Update', edit_member_group_path(member_group) %></td>
+        <% end %>
+
+          <% if policy(member_group).destroy? %>
+              <td><%= link_to 'Delete', member_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+
     <% end %>
     </tbody>
   </table>

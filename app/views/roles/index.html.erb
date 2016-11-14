@@ -40,8 +40,15 @@
           <td><%= role.source.SourceDescription %></td>
           <td><%= role.RoleDescription %>
           <td><%= link_to 'View', role %></td>
-          <td><%= link_to 'Update', edit_role_path(role) %></td>
-          <td><%= link_to 'Delete', role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <% if policy(role).update? %>
+              <td><%= link_to 'Update', edit_role_path(role) %></td>
+          <% end %>
+
+          <% if policy(role).destroy? %>
+              <td><%= link_to 'Delete', role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>
