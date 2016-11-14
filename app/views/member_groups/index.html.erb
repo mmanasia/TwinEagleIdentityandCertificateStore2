@@ -24,7 +24,7 @@
   <table>
     <thead>
     <tr>
-      <th>Network Username</th>
+      <th>Network Email</th>
       <th>User Group Name</th>
       <th colspan="3"></th>
     </tr>
@@ -34,7 +34,7 @@
     <tbody>
     <% @member_groups.each do |member_group| %>
         <tr>
-          <td><%= member_group.NetworkUser.NetworkUsername %></td>
+          <td><%= member_group.user.email %></td>
           <td><%= member_group.UserGroup.UserGroupName %></td>
           <td><%= link_to 'Show', member_group %></td>
 

@@ -1,5 +1,38 @@
 <h1>New Member Group</h1>
 
-<%= render 'form' %>
+<%= form_for(@member_group) do |f| %>
+    <% if @member_group.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@member_group.errors.count, "error") %> prohibited this member_group from being saved:</h2>
+
+          <ul>
+            <% @member_group.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :'Network Email' %><br>
+      <%= f.collection_select :user_id, User.all, :id, :email, include_blank:true %>
+    </div>
+    <div class="field">
+      <%= f.label :'User Group Name' %><br>
+      <%= f.collection_select :user_group_id, UserGroup.all, :id, :UserGroupName, include_blank:true %>
+    </div>
+    <div class="field">
+      <%= f.label :'Created By' %><br>
+      <%= f.text_field :CreatedBy %>
+    </div>
+    <div class="field">
+      <%= f.label :'Created Date' %><br>
+      <%= f.datetime_select :CreatedDate %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
 
 <%= link_to 'Back', member_groups_path %>

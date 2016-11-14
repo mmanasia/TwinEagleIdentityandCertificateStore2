@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
-
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
-  <strong>Network User Username:</strong>
-  <%= @member_group.NetworkUser.NetworkUsername %>
+  <strong>Network Email:</strong>
+  <%= @member_group.user.email %>
 </p>
 
 <p>
-  <strong>User Group:</strong>
+  <strong>User Group Name:</strong>
   <%= @member_group.UserGroup.UserGroupName %>
 </p>
 
@@ -19,7 +20,11 @@
   <strong>Created Date:</strong>
   <%= @member_group.CreatedDate %>
 </p>
+    </div>
+  </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
 <p>
   <strong>Last Modified By:</strong>
   <%= @member_group.LastModifiedBy %>
@@ -34,6 +39,8 @@
   <strong>Is Deleted:</strong>
   <%= @member_group.IsDeleted %>
 </p>
+    </div>
+  </div>
 
 <%= link_to 'Edit', edit_member_group_path(@member_group) %> |
 <%= link_to 'Back', member_groups_path %>

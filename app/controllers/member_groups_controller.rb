@@ -79,6 +79,6 @@ class MemberGroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def member_group_params
-      params.require(:member_group).permit(:NetworkUser_id, :UserGroup_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
+      params.require(:member_group).permit(:user_id, :UserGroup_id, :CreatedBy, :CreatedDate, :LastModifiedBy, :LastModifiedDate, :IsDeleted)
     end
 end

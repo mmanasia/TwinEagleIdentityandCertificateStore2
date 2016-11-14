@@ -12,31 +12,31 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :NetworkUser_id %><br>
-    <%= f.number_field :NetworkUser_id %>
+    <%= f.label :'Network Email' %><br>
+    <%= f.collection_select :user_id, User.all, :id, :email, include_blank:true %>
   </div>
   <div class="field">
-    <%= f.label :UserGroup_id %><br>
-    <%= f.number_field :UserGroup_id %>
+    <%= f.label :'User Group Name' %><br>
+    <%= f.collection_select :user_group_id, UserGroup.all, :id, :UserGroupName, include_blank:true %>
   </div>
   <div class="field">
-    <%= f.label :CreatedBy %><br>
+    <%= f.label :'Created By' %><br>
     <%= f.text_field :CreatedBy %>
   </div>
   <div class="field">
-    <%= f.label :CreatedDate %><br>
+    <%= f.label :'Created Date' %><br>
     <%= f.datetime_select :CreatedDate %>
   </div>
   <div class="field">
-    <%= f.label :LastModifiedBy %><br>
+    <%= f.label :'Last Modified By' %><br>
     <%= f.text_field :LastModifiedBy %>
   </div>
   <div class="field">
-    <%= f.label :LastModifiedDate %><br>
+    <%= f.label :'Last Modified Date' %><br>
     <%= f.datetime_select :LastModifiedDate %>
   </div>
   <div class="field">
-    <%= f.label :IsDeleted %><br>
+    <%= f.label :'Is Deleted' %><br>
     <%= f.check_box :IsDeleted %>
   </div>
   <div class="actions">

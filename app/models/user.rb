@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :trackable, :rememberable, :validatable
 
   belongs_to :user_group
+  has_many :member_groups
+
 end
