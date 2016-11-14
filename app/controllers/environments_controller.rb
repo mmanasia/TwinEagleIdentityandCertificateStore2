@@ -16,6 +16,8 @@ class EnvironmentsController < ApplicationController
 
   # GET /environments/new
   def new
+    authorize @environment
+
     @environment = Environment.new
   end
 
@@ -26,6 +28,8 @@ class EnvironmentsController < ApplicationController
   # POST /environments
   # POST /environments.json
   def create
+    authorize @environment
+
     @environment = Environment.new(environment_params)
 
     respond_to do |format|
@@ -42,6 +46,8 @@ class EnvironmentsController < ApplicationController
   # PATCH/PUT /environments/1
   # PATCH/PUT /environments/1.json
   def update
+    authorize @environment
+
     respond_to do |format|
       if @environment.update(environment_params)
         format.html { redirect_to @environment, notice: 'Environment was successfully updated.' }
@@ -56,6 +62,8 @@ class EnvironmentsController < ApplicationController
   # DELETE /environments/1
   # DELETE /environments/1.json
   def destroy
+    authorize @environment
+
     @environment.destroy
     respond_to do |format|
       format.html { redirect_to environments_url, notice: 'Environment was successfully deleted.' }

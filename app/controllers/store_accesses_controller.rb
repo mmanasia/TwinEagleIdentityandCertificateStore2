@@ -16,6 +16,8 @@ class StoreAccessesController < ApplicationController
 
   # GET /store_accesses/new
   def new
+    authorize @store_access
+
     @store_access = StoreAccess.new
   end
 
@@ -26,6 +28,8 @@ class StoreAccessesController < ApplicationController
   # POST /store_accesses
   # POST /store_accesses.json
   def create
+    authorize @store_access
+
     @store_access = StoreAccess.new(store_access_params)
 
     respond_to do |format|
@@ -42,6 +46,8 @@ class StoreAccessesController < ApplicationController
   # PATCH/PUT /store_accesses/1
   # PATCH/PUT /store_accesses/1.json
   def update
+    authorize @store_access
+
     respond_to do |format|
       if @store_access.update(store_access_params)
         format.html { redirect_to @store_access, notice: 'Store access was successfully updated.' }
@@ -56,6 +62,8 @@ class StoreAccessesController < ApplicationController
   # DELETE /store_accesses/1
   # DELETE /store_accesses/1.json
   def destroy
+    authorize @store_access
+
     @store_access.destroy
     respond_to do |format|
       format.html { redirect_to store_accesses_url, notice: 'Store access was successfully deleted.' }

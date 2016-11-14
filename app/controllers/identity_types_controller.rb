@@ -16,6 +16,8 @@ class IdentityTypesController < ApplicationController
 
   # GET /identity_types/new
   def new
+    authorize @identity_type
+
     @identity_type = IdentityType.new
   end
 
@@ -26,6 +28,8 @@ class IdentityTypesController < ApplicationController
   # POST /identity_types
   # POST /identity_types.json
   def create
+    authorize @identity_type
+
     @identity_type = IdentityType.new(identity_type_params)
 
     respond_to do |format|
@@ -42,6 +46,8 @@ class IdentityTypesController < ApplicationController
   # PATCH/PUT /identity_types/1
   # PATCH/PUT /identity_types/1.json
   def update
+    authorize @identity_type
+
     respond_to do |format|
       if @identity_type.update(identity_type_params)
         format.html { redirect_to @identity_type, notice: 'Identity type was successfully updated.' }
@@ -56,6 +62,8 @@ class IdentityTypesController < ApplicationController
   # DELETE /identity_types/1
   # DELETE /identity_types/1.json
   def destroy
+    authorize @identity_type
+
     @identity_type.destroy
     respond_to do |format|
       format.html { redirect_to identity_types_url, notice: 'Identity type was successfully deleted.' }

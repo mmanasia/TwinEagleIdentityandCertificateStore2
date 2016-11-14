@@ -4,8 +4,10 @@ class CertStore < ActiveRecord::Base
   belongs_to :source
   belongs_to :environment
   belongs_to :identity_type
+  belongs_to :user_group
   has_many :cert_source_links
   has_many :cert_store_roles
+
 
   validates :CertStoreName, :CertStoreDescription, :CertStorePassword, :CertStoreExpirationDate, :unc, :MimeType, :source_id, :environment_id, :identity_type_id, presence: true
 

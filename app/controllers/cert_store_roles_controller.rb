@@ -16,6 +16,8 @@ class CertStoreRolesController < ApplicationController
 
   # GET /cert_store_roles/new
   def new
+    authorize @cert_source_link
+
     @cert_store_role = CertStoreRole.new
   end
 
@@ -26,6 +28,8 @@ class CertStoreRolesController < ApplicationController
   # POST /cert_store_roles
   # POST /cert_store_roles.json
   def create
+    authorize @cert_source_link
+
     @cert_store_role = CertStoreRole.new(cert_store_role_params)
 
     respond_to do |format|
@@ -42,6 +46,8 @@ class CertStoreRolesController < ApplicationController
   # PATCH/PUT /cert_store_roles/1
   # PATCH/PUT /cert_store_roles/1.json
   def update
+    authorize @cert_source_link
+
     respond_to do |format|
       if @cert_store_role.update(cert_store_role_params)
         format.html { redirect_to @cert_store_role, notice: 'Certificate role was successfully updated.' }
@@ -56,6 +62,8 @@ class CertStoreRolesController < ApplicationController
   # DELETE /cert_store_roles/1
   # DELETE /cert_store_roles/1.json
   def destroy
+    authorize @cert_source_link
+
     @cert_store_role.destroy
     respond_to do |format|
       format.html { redirect_to cert_store_roles_url, notice: 'Certificate role was successfully deleted.' }

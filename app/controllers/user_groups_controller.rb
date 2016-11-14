@@ -16,6 +16,8 @@ class UserGroupsController < ApplicationController
 
   # GET /user_groups/new
   def new
+    authorize @user_group
+
     @user_group = UserGroup.new
   end
 
@@ -26,6 +28,8 @@ class UserGroupsController < ApplicationController
   # POST /user_groups
   # POST /user_groups.json
   def create
+    authorize @user_group
+
     @user_group = UserGroup.new(user_group_params)
 
     respond_to do |format|
@@ -42,6 +46,8 @@ class UserGroupsController < ApplicationController
   # PATCH/PUT /user_groups/1
   # PATCH/PUT /user_groups/1.json
   def update
+    authorize @user_group
+
     respond_to do |format|
       if @user_group.update(user_group_params)
         format.html { redirect_to @user_group, notice: 'User group was successfully updated.' }
@@ -56,6 +62,8 @@ class UserGroupsController < ApplicationController
   # DELETE /user_groups/1
   # DELETE /user_groups/1.json
   def destroy
+    authorize @user_group
+
     @user_group.destroy
     respond_to do |format|
       format.html { redirect_to user_groups_url, notice: 'User group was successfully deleted.' }

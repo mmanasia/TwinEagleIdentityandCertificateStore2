@@ -16,6 +16,8 @@ class SourceLinksController < ApplicationController
 
   # GET /source_links/new
   def new
+    authorize @source_link
+
     @source_link = SourceLink.new
   end
 
@@ -26,6 +28,8 @@ class SourceLinksController < ApplicationController
   # POST /source_links
   # POST /source_links.json
   def create
+    authorize @source_link
+
     @source_link = SourceLink.new(source_link_params)
 
     respond_to do |format|
@@ -42,6 +46,8 @@ class SourceLinksController < ApplicationController
   # PATCH/PUT /source_links/1
   # PATCH/PUT /source_links/1.json
   def update
+    authorize @source_link
+
     respond_to do |format|
       if @source_link.update(source_link_params)
         format.html { redirect_to @source_link, notice: 'Source link was successfully updated.' }
@@ -56,6 +62,8 @@ class SourceLinksController < ApplicationController
   # DELETE /source_links/1
   # DELETE /source_links/1.json
   def destroy
+    authorize @source_link
+
     @source_link.destroy
     respond_to do |format|
       format.html { redirect_to source_links_url, notice: 'Source link was successfully deleted.' }

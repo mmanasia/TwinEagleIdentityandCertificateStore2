@@ -16,6 +16,8 @@ class UserStoresController < ApplicationController
 
   # GET /user_stores/new
   def new
+    authorize @user_store
+
     @user_store = UserStore.new
   end
 
@@ -26,6 +28,8 @@ class UserStoresController < ApplicationController
   # POST /user_stores
   # POST /user_stores.json
   def create
+    authorize @user_store
+
     @user_store = UserStore.new(user_store_params)
 
     respond_to do |format|
@@ -42,6 +46,8 @@ class UserStoresController < ApplicationController
   # PATCH/PUT /user_stores/1
   # PATCH/PUT /user_stores/1.json
   def update
+    authorize @user_store
+
     respond_to do |format|
       if @user_store.update(user_store_params)
         format.html { redirect_to @user_store, notice: 'User store was successfully updated.' }
@@ -56,6 +62,8 @@ class UserStoresController < ApplicationController
   # DELETE /user_stores/1
   # DELETE /user_stores/1.json
   def destroy
+    authorize @user_store
+
     @user_store.destroy
     respond_to do |format|
       format.html { redirect_to user_stores_url, notice: 'User store was successfully deleted.' }
