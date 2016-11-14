@@ -29,11 +29,12 @@ class CertStoresController < ApplicationController
   # POST /cert_stores
   # POST /cert_stores.json
   def create
-    authorize @cert_store
 
     @cert_store = CertStore.new(cert_store_params)
 
     respond_to do |format|
+      authorize @cert_store
+
       if @cert_store.save
         format.html { redirect_to @cert_store, notice: 'Certificate was successfully created.' }
         format.json { render :show, status: :created, location: @cert_store }
@@ -47,9 +48,9 @@ class CertStoresController < ApplicationController
   # PATCH/PUT /cert_stores/1
   # PATCH/PUT /cert_stores/1.json
   def update
-    authorize @cert_store
-
     respond_to do |format|
+      authorize @cert_store
+
       if @cert_store.update(cert_store_params)
         format.html { redirect_to @cert_store, notice: 'Certificate was successfully updated.' }
         format.json { render :show, status: :ok, location: @cert_store }
@@ -63,10 +64,10 @@ class CertStoresController < ApplicationController
   # DELETE /cert_stores/1
   # DELETE /cert_stores/1.json
   def destroy
-    authorize @cert_store
-
     @cert_store.destroy
     respond_to do |format|
+      authorize @cert_store
+
       format.html { redirect_to cert_stores_url, notice: 'Certificate was successfully deleted.' }
       format.json { head :no_content }
     end

@@ -28,11 +28,11 @@ class UserStoresController < ApplicationController
   # POST /user_stores
   # POST /user_stores.json
   def create
-    authorize @user_store
-
     @user_store = UserStore.new(user_store_params)
 
     respond_to do |format|
+      authorize @user_store
+
       if @user_store.save
         format.html { redirect_to @user_store, notice: 'User store was successfully created.' }
         format.json { render :show, status: :created, location: @user_store }
@@ -46,9 +46,9 @@ class UserStoresController < ApplicationController
   # PATCH/PUT /user_stores/1
   # PATCH/PUT /user_stores/1.json
   def update
-    authorize @user_store
-
     respond_to do |format|
+      authorize @user_store
+
       if @user_store.update(user_store_params)
         format.html { redirect_to @user_store, notice: 'User store was successfully updated.' }
         format.json { render :show, status: :ok, location: @user_store }
@@ -62,10 +62,10 @@ class UserStoresController < ApplicationController
   # DELETE /user_stores/1
   # DELETE /user_stores/1.json
   def destroy
-    authorize @user_store
-
     @user_store.destroy
     respond_to do |format|
+      authorize @user_store
+
       format.html { redirect_to user_stores_url, notice: 'User store was successfully deleted.' }
       format.json { head :no_content }
     end

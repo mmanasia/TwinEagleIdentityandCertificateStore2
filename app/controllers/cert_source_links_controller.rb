@@ -28,11 +28,11 @@ class CertSourceLinksController < ApplicationController
   # POST /cert_source_links
   # POST /cert_source_links.json
   def create
-    authorize @cert_source_link
-
     @cert_source_link = CertSourceLink.new(cert_source_link_params)
 
     respond_to do |format|
+      authorize @cert_source_link
+
       if @cert_source_link.save
         format.html { redirect_to @cert_source_link, notice: 'Certificate source link was successfully created.' }
         format.json { render :show, status: :created, location: @cert_source_link }
@@ -46,9 +46,9 @@ class CertSourceLinksController < ApplicationController
   # PATCH/PUT /cert_source_links/1
   # PATCH/PUT /cert_source_links/1.json
   def update
-    authorize @cert_source_link
-
     respond_to do |format|
+      authorize @cert_source_link
+
       if @cert_source_link.update(cert_source_link_params)
         format.html { redirect_to @cert_source_link, notice: 'Certificate source link was successfully updated.' }
         format.json { render :show, status: :ok, location: @cert_source_link }
@@ -62,10 +62,10 @@ class CertSourceLinksController < ApplicationController
   # DELETE /cert_source_links/1
   # DELETE /cert_source_links/1.json
   def destroy
-    authorize @cert_source_link
-
     @cert_source_link.destroy
     respond_to do |format|
+      authorize @cert_source_link
+
       format.html { redirect_to cert_source_links_url, notice: 'Certificate source link was successfully deleted.' }
       format.json { head :no_content }
     end

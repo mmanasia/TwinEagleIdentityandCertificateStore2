@@ -28,11 +28,11 @@ class UserStoreRolesController < ApplicationController
   # POST /user_store_roles
   # POST /user_store_roles.json
   def create
-    authorize @user_store_role
-
     @user_store_role = UserStoreRole.new(user_store_role_params)
 
     respond_to do |format|
+      authorize @user_store_role
+
       if @user_store_role.save
         format.html { redirect_to @user_store_role, notice: 'User store role was successfully created.' }
         format.json { render :show, status: :created, location: @user_store_role }
@@ -46,9 +46,9 @@ class UserStoreRolesController < ApplicationController
   # PATCH/PUT /user_store_roles/1
   # PATCH/PUT /user_store_roles/1.json
   def update
-    authorize @user_store_role
-
     respond_to do |format|
+      authorize @user_store_role
+
       if @user_store_role.update(user_store_role_params)
         format.html { redirect_to @user_store_role, notice: 'User store role was successfully updated.' }
         format.json { render :show, status: :ok, location: @user_store_role }
@@ -62,10 +62,10 @@ class UserStoreRolesController < ApplicationController
   # DELETE /user_store_roles/1
   # DELETE /user_store_roles/1.json
   def destroy
-    authorize @user_store_role
-
     @user_store_role.destroy
     respond_to do |format|
+      authorize @user_store_role
+
       format.html { redirect_to user_store_roles_url, notice: 'User store role was successfully deleted.' }
       format.json { head :no_content }
     end

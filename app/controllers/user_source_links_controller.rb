@@ -28,11 +28,11 @@ class UserSourceLinksController < ApplicationController
   # POST /user_source_links
   # POST /user_source_links.json
   def create
-    authorize @user_source_link
-
     @user_source_link = UserSourceLink.new(user_source_link_params)
 
     respond_to do |format|
+      authorize @user_source_link
+
       if @user_source_link.save
         format.html { redirect_to @user_source_link, notice: 'User source link was successfully created.' }
         format.json { render :show, status: :created, location: @user_source_link }
@@ -46,9 +46,9 @@ class UserSourceLinksController < ApplicationController
   # PATCH/PUT /user_source_links/1
   # PATCH/PUT /user_source_links/1.json
   def update
-    authorize @user_source_link
-
     respond_to do |format|
+      authorize @user_source_link
+
       if @user_source_link.update(user_source_link_params)
         format.html { redirect_to @user_source_link, notice: 'User source link was successfully updated.' }
         format.json { render :show, status: :ok, location: @user_source_link }
@@ -62,10 +62,10 @@ class UserSourceLinksController < ApplicationController
   # DELETE /user_source_links/1
   # DELETE /user_source_links/1.json
   def destroy
-    authorize @user_source_link
-
     @user_source_link.destroy
     respond_to do |format|
+      authorize @user_source_link
+
       format.html { redirect_to user_source_links_url, notice: 'User source link was successfully deleted.' }
       format.json { head :no_content }
     end

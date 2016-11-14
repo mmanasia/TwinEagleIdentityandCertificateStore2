@@ -28,11 +28,11 @@ class RolesController < ApplicationController
   # POST /roles
   # POST /roles.json
   def create
-    authorize @role
-
     @role = Role.new(role_params)
 
     respond_to do |format|
+      authorize @role
+
       if @role.save
         format.html { redirect_to @role, notice: 'Role was successfully created.' }
         format.json { render :show, status: :created, location: @role }
@@ -46,9 +46,9 @@ class RolesController < ApplicationController
   # PATCH/PUT /roles/1
   # PATCH/PUT /roles/1.json
   def update
-    authorize @role
-
     respond_to do |format|
+      authorize @role
+
       if @role.update(role_params)
         format.html { redirect_to @role, notice: 'Role was successfully updated.' }
         format.json { render :show, status: :ok, location: @role }
@@ -62,10 +62,10 @@ class RolesController < ApplicationController
   # DELETE /roles/1
   # DELETE /roles/1.json
   def destroy
-    authorize @role
-
     @role.destroy
     respond_to do |format|
+      authorize @role
+
       format.html { redirect_to roles_url, notice: 'Role was successfully deleted.' }
       format.json { head :no_content }
     end

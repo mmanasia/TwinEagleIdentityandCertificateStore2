@@ -28,11 +28,11 @@ class IdentityTypesController < ApplicationController
   # POST /identity_types
   # POST /identity_types.json
   def create
-    authorize @identity_type
-
     @identity_type = IdentityType.new(identity_type_params)
 
     respond_to do |format|
+      authorize @identity_type
+
       if @identity_type.save
         format.html { redirect_to @identity_type, notice: 'Identity type was successfully created.' }
         format.json { render :show, status: :created, location: @identity_type }
@@ -46,9 +46,9 @@ class IdentityTypesController < ApplicationController
   # PATCH/PUT /identity_types/1
   # PATCH/PUT /identity_types/1.json
   def update
-    authorize @identity_type
-
     respond_to do |format|
+      authorize @identity_type
+
       if @identity_type.update(identity_type_params)
         format.html { redirect_to @identity_type, notice: 'Identity type was successfully updated.' }
         format.json { render :show, status: :ok, location: @identity_type }
@@ -62,10 +62,10 @@ class IdentityTypesController < ApplicationController
   # DELETE /identity_types/1
   # DELETE /identity_types/1.json
   def destroy
-    authorize @identity_type
-
     @identity_type.destroy
     respond_to do |format|
+      authorize @identity_type
+
       format.html { redirect_to identity_types_url, notice: 'Identity type was successfully deleted.' }
       format.json { head :no_content }
     end

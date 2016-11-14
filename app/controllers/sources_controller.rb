@@ -28,11 +28,11 @@ class SourcesController < ApplicationController
   # POST /sources
   # POST /sources.json
   def create
-    authorize @source
-
     @source = Source.new(source_params)
 
     respond_to do |format|
+      authorize @source
+
       if @source.save
         format.html { redirect_to @source, notice: 'Source was successfully created.' }
         format.json { render :show, status: :created, location: @source }
@@ -46,9 +46,9 @@ class SourcesController < ApplicationController
   # PATCH/PUT /sources/1
   # PATCH/PUT /sources/1.json
   def update
-    authorize @source
-
     respond_to do |format|
+      authorize @source
+
       if @source.update(source_params)
         format.html { redirect_to @source, notice: 'Source was successfully updated.' }
         format.json { render :show, status: :ok, location: @source }
@@ -62,10 +62,10 @@ class SourcesController < ApplicationController
   # DELETE /sources/1
   # DELETE /sources/1.json
   def destroy
-    authorize @source
-
     @source.destroy
     respond_to do |format|
+      authorize @source
+
       format.html { redirect_to sources_url, notice: 'Source was successfully deleted.' }
       format.json { head :no_content }
     end

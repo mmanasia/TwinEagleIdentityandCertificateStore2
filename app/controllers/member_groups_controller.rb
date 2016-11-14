@@ -28,11 +28,11 @@ class MemberGroupsController < ApplicationController
   # POST /member_groups
   # POST /member_groups.json
   def create
-    authorize @member_group
-
     @member_group = MemberGroup.new(member_group_params)
 
     respond_to do |format|
+      authorize @member_group
+
       if @member_group.save
         format.html { redirect_to @member_group, notice: 'Member group was successfully created.' }
         format.json { render :show, status: :created, location: @member_group }
@@ -46,9 +46,9 @@ class MemberGroupsController < ApplicationController
   # PATCH/PUT /member_groups/1
   # PATCH/PUT /member_groups/1.json
   def update
-    authorize @member_group
-
     respond_to do |format|
+      authorize @member_group
+
       if @member_group.update(member_group_params)
         format.html { redirect_to @member_group, notice: 'Member group was successfully updated.' }
         format.json { render :show, status: :ok, location: @member_group }
@@ -62,10 +62,10 @@ class MemberGroupsController < ApplicationController
   # DELETE /member_groups/1
   # DELETE /member_groups/1.json
   def destroy
-    authorize @member_group
-
     @member_group.destroy
     respond_to do |format|
+      authorize @member_group
+
       format.html { redirect_to member_groups_url, notice: 'Member group was successfully deleted.' }
       format.json { head :no_content }
     end

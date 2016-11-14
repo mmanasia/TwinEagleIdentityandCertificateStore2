@@ -28,11 +28,11 @@ class EnvironmentsController < ApplicationController
   # POST /environments
   # POST /environments.json
   def create
-    authorize @environment
-
     @environment = Environment.new(environment_params)
 
     respond_to do |format|
+      authorize @environment
+
       if @environment.save
         format.html { redirect_to @environment, notice: 'Environment was successfully created.' }
         format.json { render :show, status: :created, location: @environment }
@@ -46,9 +46,9 @@ class EnvironmentsController < ApplicationController
   # PATCH/PUT /environments/1
   # PATCH/PUT /environments/1.json
   def update
-    authorize @environment
-
     respond_to do |format|
+      authorize @environment
+
       if @environment.update(environment_params)
         format.html { redirect_to @environment, notice: 'Environment was successfully updated.' }
         format.json { render :show, status: :ok, location: @environment }
@@ -62,10 +62,10 @@ class EnvironmentsController < ApplicationController
   # DELETE /environments/1
   # DELETE /environments/1.json
   def destroy
-    authorize @environment
-
     @environment.destroy
     respond_to do |format|
+      authorize @environment
+
       format.html { redirect_to environments_url, notice: 'Environment was successfully deleted.' }
       format.json { head :no_content }
     end
