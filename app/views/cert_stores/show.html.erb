@@ -11,6 +11,8 @@
   <%= @cert_store.CertStoreDescription %>
 </p>
 
+    <div class="panel panel-default">
+      <div class="panel-body">
 <p>
   <strong>Certificate Password:</strong>
   <%= @cert_store.CertStorePassword %>
@@ -25,6 +27,8 @@
   <strong>Certificate File:</strong>
   <%= link_to 'Download Certificate', @cert_store.unc_url %>
 </p>
+        </div>
+      </div>
 
 <p>
   <strong>Mime Type:</strong>
@@ -172,10 +176,6 @@
       <%= @cert_store.LastModifiedDate %>
     </p>
 
-    <p>
-      <strong>Is Deleted:</strong>
-      <%= @cert_store.IsDeleted %>
-    </p>
   </div>
 </div>
 

@@ -29,9 +29,7 @@
     <tr>
       <th>Certificate Name</th>
       <th>Certificate Description</th>
-      <th>Certificate Password</th>
       <th>Certificate Expiration Date</th>
-      <th>Certificate File</th>
       <th>Mime Type</th>
       <th>Source Description</th>
       <th>Environment Name</th>
@@ -45,9 +43,7 @@
         <tr>
           <td><%= cert_store.CertStoreName %></td>
           <td><%= cert_store.CertStoreDescription %></td>
-          <td><%= cert_store.CertStorePassword %></td>
           <td><%= cert_store.CertStoreExpirationDate %></td>
-          <td><%= link_to 'Download Certificate', cert_store.unc_url %></td>
           <td><%= cert_store.MimeType %></td>
           <td><%= cert_store.source.SourceDescription %></td>
           <td><%= cert_store.environment.EnvironmentName %></td>

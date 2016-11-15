@@ -6,6 +6,8 @@
   <%= @user_store.UserStoreName %>
 </p>
 
+    <div class="panel panel-default">
+      <div class="panel-body">
 <p>
   <strong>User Store Password:</strong>
   <%= @user_store.UserStorePassword %>
@@ -15,6 +17,8 @@
   <strong>User Store Expiration Date:</strong>
   <%= @user_store.UserStoreExpirationDate %>
 </p>
+</div>
+      </div>
 
 <p>
   <strong>Source Description:</strong>
@@ -157,10 +161,6 @@
       <%= @user_store.LastModifiedDate %>
     </p>
 
-    <p>
-      <strong>Is Deleted:</strong>
-      <%= @user_store.IsDeleted %>
-    </p>
   </div>
 </div>
 

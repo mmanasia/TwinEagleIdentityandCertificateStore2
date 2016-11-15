@@ -28,7 +28,6 @@
     <thead>
     <tr>
       <th>User Store Name</th>
-      <th>User Store Password</th>
       <th>User Store Expiration Date</th>
       <th>Source Description</th>
       <th>Environment Name</th>
@@ -41,7 +40,6 @@
     <% @user_stores.each do |user_store| %>
         <tr>
           <td><%= user_store.UserStoreName %></td>
-          <td><%= user_store.UserStorePassword %></td>
           <td><%= user_store.UserStoreExpirationDate %></td>
           <td><%= user_store.source.SourceDescription %></td>
           <td><%= user_store.environment.EnvironmentName %></td>
