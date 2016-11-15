@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   resources :environments
   resources :source_links
   resources :sources
-  resources :admin
+  # resources :admins
   resources :home
 
   # The priority is based upon order of creation: first created -> highest priority.
