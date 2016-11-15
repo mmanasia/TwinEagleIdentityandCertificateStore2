@@ -10,11 +10,12 @@ class ApplicationController < ActionController::Base
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password,:password_confirmation, :user_group_id ])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:email, :password,:password_confirmation])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :password,:password_confirmation, :user_group_id ])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:username, :email, :password,:password_confirmation])
   end
 
   # private
