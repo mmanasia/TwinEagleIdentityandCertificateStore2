@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/admin_panel', as: 'rails_admin'
   devise_for :users
+  match '/users',   to: 'users#index',   via: 'get'
+
   resources :member_groups
   resources :user_groups
   resources :user_access_audit_logs
