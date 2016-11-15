@@ -36,7 +36,6 @@
     <% @sources.each do |source| %>
         <tr>
           <td><%= source.SourceDescription %></td>
-          <td><%= link_to 'View', source %></td>
 
           <% if policy(source).update? %>
               <td><%= link_to 'Update', edit_source_path(source) %></td>

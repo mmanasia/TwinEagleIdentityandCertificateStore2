@@ -38,7 +38,6 @@
         <tr>
           <td><%= user_group.UserGroupName %></td>
           <td><%= user_group.admin %></td>
-          <td><%= link_to 'View', user_group %></td>
 
           <% if policy(user_group).update? %>
               <td><%= link_to 'Update', edit_user_group_path(user_group) %></td>

@@ -39,7 +39,6 @@
         <tr>
           <td><%= environment.EnvironmentName %></td>
           <td><%= environment.EnvironmentDescription %></td>
-          <td><%= link_to 'View', environment %></td>
 
           <% if policy(environment).update? %>
               <td><%= link_to 'Update', edit_environment_path(environment) %></td>

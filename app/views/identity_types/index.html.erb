@@ -39,7 +39,6 @@
         <tr>
           <td><%= identity_type.IdentityTypeName %></td>
           <td><%= identity_type.IdentityTypeDescription %></td>
-          <td><%= link_to 'View', identity_type %></td>
 
           <% if policy(identity_type).update? %>
               <td><%= link_to 'Update', edit_identity_type_path(identity_type) %></td>

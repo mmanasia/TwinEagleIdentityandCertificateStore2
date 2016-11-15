@@ -36,7 +36,6 @@
         <tr>
           <td><%= member_group.user.email %></td>
           <td><%= member_group.UserGroup.UserGroupName %></td>
-          <td><%= link_to 'Show', member_group %></td>
 
           <% if policy(member_group).update? %>
               <td><%= link_to 'Update', edit_member_group_path(member_group) %></td>

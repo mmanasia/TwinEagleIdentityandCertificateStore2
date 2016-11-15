@@ -36,7 +36,6 @@
     <% @source_links.each do |source_link| %>
         <tr>
           <td><%= source_link.Hyperlink %></td>
-          <td><%= link_to 'View', source_link %></td>
 
           <% if policy(source_link).update? %>
               <td><%= link_to 'Update', edit_source_link_path(source_link) %></td>

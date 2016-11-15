@@ -41,7 +41,6 @@
           <td><%= store_access.user_store.UserStoreName %></td>
           <td><%= store_access.cert_store.CertStoreName %></td>
           <td><%= store_access.NetworkId %></td>
-          <td><%= link_to 'View', store_access %></td>
 
           <% if policy(store_access).update? %>
               <td><%= link_to 'Update', edit_store_access_path(store_access) %></td>

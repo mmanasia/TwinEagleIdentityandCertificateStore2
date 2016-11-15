@@ -39,7 +39,6 @@
         <tr>
           <td><%= role.source.SourceDescription %></td>
           <td><%= role.RoleDescription %>
-          <td><%= link_to 'View', role %></td>
 
           <% if policy(role).update? %>
               <td><%= link_to 'Update', edit_role_path(role) %></td>
