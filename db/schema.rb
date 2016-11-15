@@ -11,12 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114230344) do
+ActiveRecord::Schema.define(version: 20161115032412) do
 
   create_table "admins", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
+
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
   create_table "cert_source_links", force: :cascade do |t|
     t.integer  "source_link_id"
@@ -28,8 +41,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "cert_source_links", ["deleted_at"], name: "index_cert_source_links_on_deleted_at"
@@ -45,8 +58,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "cert_store_roles", ["deleted_at"], name: "index_cert_store_roles_on_deleted_at"
@@ -69,8 +82,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "cert_stores", ["deleted_at"], name: "index_cert_stores_on_deleted_at"
@@ -86,8 +99,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "environments", ["deleted_at"], name: "index_environments_on_deleted_at"
@@ -103,8 +116,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "identity_types", ["deleted_at"], name: "index_identity_types_on_deleted_at"
@@ -120,8 +133,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "member_groups", ["deleted_at"], name: "index_member_groups_on_deleted_at"
@@ -137,8 +150,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "roles", ["deleted_at"], name: "index_roles_on_deleted_at"
@@ -153,8 +166,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "source_links", ["deleted_at"], name: "index_source_links_on_deleted_at"
@@ -169,8 +182,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "sources", ["deleted_at"], name: "index_sources_on_deleted_at"
@@ -187,8 +200,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "store_accesses", ["deleted_at"], name: "index_store_accesses_on_deleted_at"
@@ -249,8 +262,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "user_source_links", ["deleted_at"], name: "index_user_source_links_on_deleted_at"
@@ -266,8 +279,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "user_store_roles", ["deleted_at"], name: "index_user_store_roles_on_deleted_at"
@@ -287,8 +300,8 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.boolean  "IsDeleted"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
-    t.integer  "user_group_id"
     t.datetime "deleted_at"
+    t.integer  "user_group_id"
   end
 
   add_index "user_stores", ["deleted_at"], name: "index_user_stores_on_deleted_at"
@@ -311,7 +324,6 @@ ActiveRecord::Schema.define(version: 20161114230344) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.integer  "user_group_id"
-    t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

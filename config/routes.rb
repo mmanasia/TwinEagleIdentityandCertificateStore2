@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   mount RailsAdmin::Engine => '/admin_panel', as: 'rails_admin'
   devise_for :users
   match '/users',   to: 'users#index',   via: 'get'
