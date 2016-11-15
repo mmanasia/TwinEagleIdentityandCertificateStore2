@@ -16,9 +16,8 @@ class MemberGroupsController < ApplicationController
 
   # GET /member_groups/new
   def new
-    authorize @member_group
-
     @member_group = MemberGroup.new
+    authorize @member_group
   end
 
   # GET /member_groups/1/edit

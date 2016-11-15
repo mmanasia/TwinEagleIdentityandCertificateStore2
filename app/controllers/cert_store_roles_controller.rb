@@ -16,9 +16,8 @@ class CertStoreRolesController < ApplicationController
 
   # GET /cert_store_roles/new
   def new
-    authorize @cert_source_link
-
     @cert_store_role = CertStoreRole.new
+    authorize @cert_source_link
   end
 
   # GET /cert_store_roles/1/edit

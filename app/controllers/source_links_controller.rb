@@ -16,9 +16,8 @@ class SourceLinksController < ApplicationController
 
   # GET /source_links/new
   def new
-    authorize @source_link
-
     @source_link = SourceLink.new
+    authorize @source_link
   end
 
   # GET /source_links/1/edit

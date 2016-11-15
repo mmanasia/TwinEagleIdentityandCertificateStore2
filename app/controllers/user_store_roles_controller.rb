@@ -16,9 +16,8 @@ class UserStoreRolesController < ApplicationController
 
   # GET /user_store_roles/new
   def new
-    authorize @user_store_role
-
     @user_store_role = UserStoreRole.new
+    authorize @user_store_role
   end
 
   # GET /user_store_roles/1/edit

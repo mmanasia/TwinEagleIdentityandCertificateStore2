@@ -16,9 +16,8 @@ class SourcesController < ApplicationController
 
   # GET /sources/new
   def new
-    authorize @source
-
     @source = Source.new
+    authorize @source
   end
 
   # GET /sources/1/edit

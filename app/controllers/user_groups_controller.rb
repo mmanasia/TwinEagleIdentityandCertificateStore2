@@ -16,9 +16,8 @@ class UserGroupsController < ApplicationController
 
   # GET /user_groups/new
   def new
-    authorize @user_group
-
     @user_group = UserGroup.new
+    authorize @user_group
   end
 
   # GET /user_groups/1/edit

@@ -16,9 +16,8 @@ class IdentityTypesController < ApplicationController
 
   # GET /identity_types/new
   def new
-    authorize @identity_type
-
     @identity_type = IdentityType.new
+    authorize @identity_type
   end
 
   # GET /identity_types/1/edit

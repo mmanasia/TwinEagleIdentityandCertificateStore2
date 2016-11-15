@@ -16,9 +16,8 @@ class EnvironmentsController < ApplicationController
 
   # GET /environments/new
   def new
-    authorize @environment
-
     @environment = Environment.new
+    authorize @environment
   end
 
   # GET /environments/1/edit

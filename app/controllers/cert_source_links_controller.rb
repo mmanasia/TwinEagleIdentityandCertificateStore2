@@ -16,9 +16,8 @@ class CertSourceLinksController < ApplicationController
 
   # GET /cert_source_links/new
   def new
-    authorize @cert_source_link
-
     @cert_source_link = CertSourceLink.new
+    authorize @cert_source_link
   end
 
   # GET /cert_source_links/1/edit

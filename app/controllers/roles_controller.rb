@@ -16,9 +16,8 @@ class RolesController < ApplicationController
 
   # GET /roles/new
   def new
-    authorize @role
-
     @role = Role.new
+    authorize @role
   end
 
   # GET /roles/1/edit

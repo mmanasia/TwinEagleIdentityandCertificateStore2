@@ -16,9 +16,8 @@ class StoreAccessesController < ApplicationController
 
   # GET /store_accesses/new
   def new
-    authorize @store_access
-
     @store_access = StoreAccess.new
+    authorize @store_access
   end
 
   # GET /store_accesses/1/edit

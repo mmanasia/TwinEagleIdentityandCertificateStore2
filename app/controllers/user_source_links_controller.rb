@@ -16,9 +16,8 @@ class UserSourceLinksController < ApplicationController
 
   # GET /user_source_links/new
   def new
-    authorize @user_source_link
-
     @user_source_link = UserSourceLink.new
+    authorize @user_source_link
   end
 
   # GET /user_source_links/1/edit
