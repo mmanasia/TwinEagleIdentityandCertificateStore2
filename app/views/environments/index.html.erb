@@ -20,7 +20,6 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
-  <a class="btn btn-primary btn-sm" href="http://localhost:3000/environments/new" role="button">Create New Environment</a>
 
   <BR><BR>
 
@@ -39,6 +38,7 @@
         <tr>
           <td><%= environment.EnvironmentName %></td>
           <td><%= environment.EnvironmentDescription %></td>
+          <td><%= link_to 'View Details', environment %></td>
 
           <% if policy(environment).update? %>
               <td><%= link_to 'Update', edit_environment_path(environment) %></td>
@@ -48,10 +48,12 @@
               <td><%= link_to 'Delete', environment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
 
+          <% if policy(environment).new? %>
+              <td><%= link_to 'Create New Environment', new_environment_path(environment) %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>
   </table>
 </div>
-
-<br>

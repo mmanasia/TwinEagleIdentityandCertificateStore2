@@ -20,7 +20,6 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
-  <a class="btn btn-primary btn-sm" href="http://localhost:3000/user_stores/new" role="button">Create New User Store</a>
 
   <BR><BR>
 
@@ -44,7 +43,7 @@
           <td><%= user_store.source.SourceDescription %></td>
           <td><%= user_store.environment.EnvironmentName %></td>
           <td><%= user_store.identity_type.IdentityTypeName %></td>
-          <td><%= link_to 'View', user_store %></td>
+          <td><%= link_to 'View Details', user_store %></td>
 
           <% if policy(user_store).update? %>
               <td><%= link_to 'Update', edit_user_store_path(user_store) %></td>
@@ -54,10 +53,13 @@
               <td><%= link_to 'Delete', user_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
 
+          <% if policy(user_store).new? %>
+              <td><%= link_to 'Create New User Store', new_user_store_path(user_store) %></td>
+          <% end %>
+
+
         </tr>
     <% end %>
     </tbody>
   </table>
 </div>
-
-<br>

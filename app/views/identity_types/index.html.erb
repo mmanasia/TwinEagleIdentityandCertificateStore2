@@ -20,8 +20,6 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
-  <a class="btn btn-primary btn-sm" href="http://localhost:3000/identity_types/new" role="button">Create New Identity Type</a>
-
   <BR><BR>
 
   <table>
@@ -39,6 +37,8 @@
         <tr>
           <td><%= identity_type.IdentityTypeName %></td>
           <td><%= identity_type.IdentityTypeDescription %></td>
+          <td><%= link_to 'View Details', identity_type %></td>
+
 
           <% if policy(identity_type).update? %>
               <td><%= link_to 'Update', edit_identity_type_path(identity_type) %></td>
@@ -48,10 +48,12 @@
               <td><%= link_to 'Delete', identity_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
 
+          <% if policy(identity_type).new? %>
+              <td><%= link_to 'Create New Identity Type', new_identity_type_path(identity_type) %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>
   </table>
 </div>
-
-<br>

@@ -20,7 +20,6 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
-  <a class="btn btn-primary btn-sm" href="http://localhost:3000/store_accesses/new" role="button">Create New Store Access</a>
 
   <BR><BR>
 
@@ -41,6 +40,8 @@
           <td><%= store_access.user_store.UserStoreName %></td>
           <td><%= store_access.cert_store.CertStoreName %></td>
           <td><%= store_access.NetworkId %></td>
+          <td><%= link_to 'View Details', store_access %></td>
+
 
           <% if policy(store_access).update? %>
               <td><%= link_to 'Update', edit_store_access_path(store_access) %></td>
@@ -50,10 +51,12 @@
               <td><%= link_to 'Delete', store_access, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
 
+          <% if policy(store_access).new? %>
+              <td><%= link_to 'Create New Store Access', new_store_access_path(store_access) %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>
   </table>
 </div>
-
-<br>

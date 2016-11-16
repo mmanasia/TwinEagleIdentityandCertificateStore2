@@ -18,8 +18,6 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
-  <a class="btn btn-primary btn-sm" href="http://localhost:3000/cert_source_links/new" role="button">Create New Certificate Source Link</a>
-
   <BR><BR>
 
   <table>
@@ -38,7 +36,7 @@
         <tr>
           <td><%= cert_source_link.cert_store.CertStoreName %>
           <td><%= cert_source_link.source_link.Hyperlink %></td>
-          <td><%= link_to 'View', cert_source_link %></td>
+          <td><%= link_to 'View Details', cert_source_link %></td>
 
           <% if policy(cert_source_link).update? %>
               <td><%= link_to 'Update', edit_cert_source_link_path(cert_source_link) %></td>
@@ -48,10 +46,12 @@
               <td><%= link_to 'Delete', cert_source_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
 
+          <% if policy(cert_source_link).new? %>
+              <td><%= link_to 'Create New Certificate Source Link', new_cert_source_link_path(cert_source_link) %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>
   </table>
 </div>
-
-<br>

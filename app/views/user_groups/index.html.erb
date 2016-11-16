@@ -20,7 +20,6 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
-  <a class="btn btn-primary btn-sm" href="http://localhost:3000/user_groups/new" role="button">Create New User Group</a>
 
   <BR><BR>
 
@@ -38,6 +37,8 @@
         <tr>
           <td><%= user_group.UserGroupName %></td>
           <td><%= user_group.admin %></td>
+          <td><%= link_to 'View Details', user_group %></td>
+
 
           <% if policy(user_group).update? %>
               <td><%= link_to 'Update', edit_user_group_path(user_group) %></td>
@@ -47,10 +48,12 @@
               <td><%= link_to 'Delete', user_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
 
+          <% if policy(user_group).new? %>
+              <td><%= link_to 'Create New User Group', new_user_group_path(user_group) %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>
   </table>
 </div>
-
-<br>

@@ -20,7 +20,6 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
-  <a class="btn btn-primary btn-sm" href="http://localhost:3000/roles/new" role="button">Create New Role</a>
 
   <BR><BR>
 
@@ -39,6 +38,8 @@
         <tr>
           <td><%= role.source.SourceDescription %></td>
           <td><%= role.RoleDescription %>
+          <td><%= link_to 'View Details', role %></td>
+
 
           <% if policy(role).update? %>
               <td><%= link_to 'Update', edit_role_path(role) %></td>
@@ -48,10 +49,12 @@
               <td><%= link_to 'Delete', role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
 
+          <% if policy(role).new? %>
+              <td><%= link_to 'Create New Role', new_role_path(role) %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>
   </table>
 </div>
-
-<br>

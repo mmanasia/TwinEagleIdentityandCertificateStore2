@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p>
+      <strong>Network Email:</strong>
+      <%= @user.email %>
+    </p>
+    <p>
+      <strong>Network Username:</strong>
+      <%= @user.username %>
+    </p>
+    <p>
+      <strong>First Name:</strong>
+      <%= @user.first_name %>
+    </p>
+    <p>
+      <strong>Last Name:</strong>
+      <%= @user.last_name %>
+    </p>
+    <p>
+      <strong>User Group:</strong>
+      <%= @user.user_group.UserGroupName %>
+    </p>
+  </div>
+</div>
+
+<p><%= button_to "Delete Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+
+<%= link_to 'Back', users_index_path %>

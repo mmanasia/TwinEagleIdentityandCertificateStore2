@@ -20,7 +20,6 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
-  <a class="btn btn-primary btn-sm" href="http://localhost:3000/sources/new" role="button">Create New Source</a>
 
   <BR><BR>
 
@@ -36,6 +35,8 @@
     <% @sources.each do |source| %>
         <tr>
           <td><%= source.SourceDescription %></td>
+          <td><%= link_to 'View Details', source %></td>
+
 
           <% if policy(source).update? %>
               <td><%= link_to 'Update', edit_source_path(source) %></td>
@@ -45,10 +46,12 @@
               <td><%= link_to 'Delete', source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
 
+          <% if policy(source).new? %>
+              <td><%= link_to 'Create New Source', new_source_path(source) %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>
   </table>
 </div>
-
-<br>

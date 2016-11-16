@@ -20,8 +20,6 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
-  <a class="btn btn-primary btn-sm" href="http://localhost:3000/cert_stores/new" role="button">Create New Certificate</a>
-
   <BR><BR>
 
   <table>
@@ -48,7 +46,7 @@
           <td><%= cert_store.source.SourceDescription %></td>
           <td><%= cert_store.environment.EnvironmentName %></td>
           <td><%= cert_store.identity_type.IdentityTypeName %></td>
-          <td><%= link_to 'View', cert_store %></td>
+          <td><%= link_to 'View Details', cert_store %></td>
 
           <% if policy(cert_store).update? %>
               <td><%= link_to 'Update', edit_cert_store_path(cert_store) %></td>
@@ -58,10 +56,12 @@
               <td><%= link_to 'Delete', cert_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
 
+          <% if policy(cert_store).new? %>
+              <td><%= link_to 'Create New Certificate', new_cert_store_path(cert_store) %></td>
+          <% end %>
+
         </tr>
     <% end %>
     </tbody>
   </table>
 </div>
-
-<br>

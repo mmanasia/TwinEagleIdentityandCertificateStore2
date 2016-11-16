@@ -20,6 +20,7 @@
     tr:nth-child(even){background-color: #f2f2f2}
   </style>
 
+  <BR><BR>
 
   <table>
     <thead>
@@ -35,7 +36,9 @@
     <% @member_groups.each do |member_group| %>
         <tr>
           <td><%= member_group.user.email %></td>
-          <td><%= member_group.UserGroup.UserGroupName %></td>
+          <td><%= member_group.user_group.UserGroupName %></td>
+          <td><%= link_to 'View Details', member_group %></td>
+
 
           <% if policy(member_group).update? %>
               <td><%= link_to 'Update', edit_member_group_path(member_group) %></td>
@@ -45,10 +48,12 @@
               <td><%= link_to 'Delete', member_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
 
+          <% if policy(member_group).new? %>
+              <td><%= link_to 'Create New Member Group', new_member_group_path(member_group) %></td>
+          <% end %>
+
     <% end %>
     </tbody>
   </table>
 
 </div>
-
-<br>
