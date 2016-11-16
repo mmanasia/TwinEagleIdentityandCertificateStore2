@@ -1,4 +1,4 @@
-<h1>Editing Certificate</h1>
+<h1>Updating Certificate</h1>
 
 <%= form_for(@cert_store) do |f| %>
     <% if @cert_store.errors.any? %>
@@ -67,5 +67,5 @@
 <% end %>
 
 
-<%= link_to 'Show', @cert_store %> |
+<%= link_to 'View Details', @cert_store %> |
 <%= link_to 'Back', cert_stores_path %>

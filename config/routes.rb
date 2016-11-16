@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resources :source_links
   resources :sources
   resources :home
+  resources :welcome
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

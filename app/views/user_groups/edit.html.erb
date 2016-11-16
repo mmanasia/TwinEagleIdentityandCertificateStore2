@@ -1,4 +1,4 @@
-<h1>Editing User Group</h1>
+<h1>Updating User Group</h1>
 
 <%= form_for(@user_group) do |f| %>
     <% if @user_group.errors.any? %>
@@ -38,5 +38,5 @@
     </div>
 <% end %>
 
-<%= link_to 'Show', @user_group %> |
+<%= link_to 'View Details', @user_group %> |
 <%= link_to 'Back', user_groups_path %>

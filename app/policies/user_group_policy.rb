@@ -16,4 +16,9 @@ class UserGroupPolicy < ApplicationPolicy
     user.user_group_id == 3
   end
 
+  def index?
+    user.user_group_id == 3
+  end
+
+
 end

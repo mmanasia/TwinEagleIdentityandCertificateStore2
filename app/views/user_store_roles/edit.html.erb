@@ -1,4 +1,4 @@
-<h1>Editing User Store Role</h1>
+<h1>Updating User Store Role</h1>
 
 <%= form_for(@user_store_role) do |f| %>
     <% if @user_store_role.errors.any? %>
@@ -38,5 +38,5 @@
     </div>
 <% end %>
 
-<%= link_to 'Show', @user_store_role %> |
-<%= link_to 'Back', user_store_roles_path %>
+<%= link_to 'View Details', @user_store_role %> |
+<%= link_to 'Back', _back_url %>

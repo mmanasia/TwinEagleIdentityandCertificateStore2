@@ -75,9 +75,16 @@
         <% @user_store.user_source_links.each do |user_source_link| %>
             <tr>
               <td><%= user_source_link.source_link.Hyperlink %></td>
-              <td><%= link_to 'View', user_source_link %></td>
-              <td><%= link_to 'Update', edit_user_source_link_path(user_source_link) %></td>
-              <td><%= link_to 'Delete', user_source_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'View Details', user_source_link %></td>
+
+              <% if policy(user_source_link).update? %>
+                  <td><%= link_to 'Update', edit_user_source_link_path(user_source_link) %></td>
+              <% end %>
+
+              <% if policy(user_source_link).destroy? %>
+                  <td><%= link_to 'Delete', user_source_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% end %>
+
             </tr>
         <% end %>
         </tbody>
@@ -126,9 +133,16 @@
         <% @user_store.user_store_roles.each do |user_store_role| %>
             <tr>
               <td><%= user_store_role.role.RoleDescription %></td>
-              <td><%= link_to 'View', user_store_role %></td>
-              <td><%= link_to 'Update', edit_user_store_role_path(user_store_role) %></td>
-              <td><%= link_to 'Delete', user_store_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'View Details', user_store_role %></td>
+
+              <% if policy(user_store_role).update? %>
+                  <td><%= link_to 'Update', edit_user_store_role_path(user_store_role) %></td>
+              <% end %>
+
+              <% if policy(user_store_role).destroy? %>
+                  <td><%= link_to 'Delete', user_store_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% end %>
+
             </tr>
         <% end %>
         </tbody>
@@ -165,5 +179,4 @@
 </div>
 
 
-<%= link_to 'Edit', edit_user_store_path(@user_store) %> |
 <%= link_to 'Back', user_stores_path %>

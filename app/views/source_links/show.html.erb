@@ -33,9 +33,8 @@
   </div>
   </div>
 
-<a class="btn btn-primary btn-sm" href="http://localhost:3000/cert_source_links/new" role="button">Go to Certificate Source Link</a>
-<a class="btn btn-primary btn-sm" href="http://localhost:3000/user_source_links/new" role="button">Go to User Store Source Link</a>
+<a class="btn btn-primary btn-sm" href="http://localhost:3000/cert_source_links/new" role="button">Add to a Certificate </a>
+<a class="btn btn-primary btn-sm" href="http://localhost:3000/user_source_links/new" role="button">Add to a User Store</a>
 <BR><BR>
 
-<%= link_to 'Edit', edit_source_link_path(@source_link) %> |
-<%= link_to 'Back', source_links_path %>
+<%= link_to 'Back', _back_url %>

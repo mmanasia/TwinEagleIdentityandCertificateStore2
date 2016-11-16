@@ -1,4 +1,4 @@
-<h1>Editing Role</h1>
+<h1>Updating Role</h1>
 
 <%= form_for(@role) do |f| %>
     <% if @role.errors.any? %>
@@ -40,5 +40,6 @@
 <% end %>
 
 
-<%= link_to 'Show', @role %> |
-<%= link_to 'Back', roles_path %>
+<%= link_to 'View Details', @role %>
+<%= link_to 'Back', _back_url %>
+

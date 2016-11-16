@@ -7,6 +7,7 @@ class SourceLinksController < ApplicationController
   # GET /source_links.json
   def index
     @source_links = SourceLink.all
+    # authorize @source_link
   end
 
   # GET /source_links/1

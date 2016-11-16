@@ -1,4 +1,4 @@
-<h1>Editing Certificate Role</h1>
+<h1>Updating Certificate Role</h1>
 
 <%= form_for(@cert_store_role) do |f| %>
     <% if @cert_store_role.errors.any? %>
@@ -38,5 +38,5 @@
     </div>
 <% end %>
 
-<%= link_to 'Show', @cert_store_role %> |
-<%= link_to 'Back', cert_store_roles_path %>
+<%= link_to 'View Details', @cert_store_role %> |
+<%= link_to 'Back', _back_url %>
