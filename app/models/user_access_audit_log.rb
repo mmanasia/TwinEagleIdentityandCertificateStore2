@@ -1,2 +1,2 @@
-class UserAccessAuditLog < ActiveRecord::Base
+class UserAccessAuditLog < SecondBase::Base
 end

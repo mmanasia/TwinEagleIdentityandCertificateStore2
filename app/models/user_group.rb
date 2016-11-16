@@ -1,4 +1,4 @@
-class UserGroup < ActiveRecord::Base
+class UserGroup < SecondBase::Base
   acts_as_paranoid
 
   has_many :member_groups

@@ -12,12 +12,12 @@ CertStoreRole.delete_all
 CertStore.delete_all
 Environment.delete_all
 IdentityType.delete_all
-MemberGroup.delete_all
+# MemberGroup.delete_all
 Role.delete_all
 SourceLink.delete_all
 Source.delete_all
 StoreAccess.delete_all
-UserGroup.delete_all
+# UserGroup.delete_all
 UserSourceLink.delete_all
 UserStoreRole.delete_all
 UserStore.delete_all

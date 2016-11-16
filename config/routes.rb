@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/index'
+   # get 'users/index'
 
   mount RailsAdmin::Engine => '/admin_panel', as: 'rails_admin'
 

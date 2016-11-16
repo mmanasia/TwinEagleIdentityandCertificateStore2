@@ -1,4 +1,4 @@
-class MemberGroup < ActiveRecord::Base
+class MemberGroup < SecondBase::Base
   acts_as_paranoid
 
   belongs_to :user_group

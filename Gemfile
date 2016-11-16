@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -66,10 +66,10 @@ gem 'coffee-script-source', '1.10.0'
 # fixes compatibility issues in Windows OS
 
 gem 'activerecord-sqlserver-adapter'
-# gem 'tiny_tds', '1.0.4'
+gem 'tiny_tds', '1.0.4'
 # allows connection between application and SQL Server
 
-# gem 'secondbase'
+ gem 'secondbase'
 # allows connection to more than one database
 
 gem 'rails_admin'
