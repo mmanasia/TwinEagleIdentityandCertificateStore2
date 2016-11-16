@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin_panel', as: 'rails_admin'
 
-  devise_for :admins
   devise_for :users, :path_prefix => 'd'
   resources :users, :only =>[:show]
 
@@ -24,7 +23,6 @@ Rails.application.routes.draw do
   resources :environments
   resources :source_links
   resources :sources
-  # resources :admins
   resources :home
 
   # The priority is based upon order of creation: first created -> highest priority.
